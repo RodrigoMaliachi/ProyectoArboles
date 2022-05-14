@@ -1,28 +1,29 @@
-package modelo;
+package arbolb;
 
 import java.io.Serializable;
 
 public class Graduado implements Serializable {
     private int indice;
     private String nombre;
-    private int promedio;
+    private String promedio;
     private String profesion;
 
-    public  Graduado(String nombre, int promedio, String profesion){
+    public  Graduado(int indice,String nombre, String profesion, String promedio){
         this.nombre = nombre;
         this.promedio = promedio;
         this.profesion = profesion;
+        this.indice = indice;
     }
 
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
     //------------------------------
-    public int getPromedio(){
+    public String getPromedio(){
         return promedio;
     }
 
-    public void setPromedio(int promedio){
+    public void setPromedio(String promedio){
         this.promedio = promedio;
     }
     //-------------------------------
