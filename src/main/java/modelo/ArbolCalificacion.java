@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArbolCalificacion {
-    private DepositoArchivos<String, ListaSimple> calificaciones;
     private DepositoArchivos<String, ArrayList<Integer>> cal;
 
     public ArbolCalificacion(){
         try {
-            calificaciones = new DepositoArchivos("src/","calificaciones",1000);
             cal =new DepositoArchivos("src/","caliiones",1000);
         } catch (ArbolException e) {
             throw new RuntimeException(e);
@@ -22,50 +20,22 @@ public class ArbolCalificacion {
     }
 
     public void crearArbol(ArrayList<Graduado> listaa) throws SerializadorException, ArbolException {
-
         for (Graduado graduado : listaa) {
             String cadena = graduado.getPromedio();
             if(cal.exists(cadena)){
-                int aux2 = graduado.getIndice();
-               //cal.get(graduado.getPromedio()).add(aux2);
-                ArrayList<Integer> aux3 = new ArrayList<>();
-                aux3 =(ArrayList<Integer>) cal.get(graduado.getPromedio()).clone();
-                aux3.add(aux2);
-               cal.modificar(cadena,aux3);
-                System.out.println("e"+graduado.getIndice()+" "+cal.get(graduado.getPromedio()));
+                int aux2 = graduado.getIndice(); // El inidice que se agregará
+                ArrayList<Integer> aux3 = new ArrayList<>();  // La lista actualizada
+                aux3 = (ArrayList<Integer>) cal.get(graduado.getPromedio()).clone();
+                aux3.add(aux2);   //Se agrega el nuevo indice
+               cal.modificar(cadena,aux3);   //Se actualizan los datos
             }else{
-              System.out.println("p"+graduado.getIndice());
-              //ListaSimple aux = new ListaSimple();
-              String p = graduado.getPromedio();
-              //this.calificaciones.agregar(p,aux);
-                ArrayList<Integer> pp = new ArrayList<>();
-                pp.add(graduado.getIndice());
-           //   calificaciones.agregar(graduado.getPromedio(),  new ListaSimple());
-                cal.agregar(graduado.getPromedio(),pp);
-                System.out.println("p"+graduado.getIndice());
+              String p = graduado.getPromedio();  //La clave del arbol
+                ArrayList<Integer> pp = new ArrayList<>();  //Se crea el arreglo que guardará el primer elemento
+                pp.add(graduado.getIndice());   //Se agrega el primer indice
+                cal.agregar(graduado.getPromedio(),pp);  // Se agrega la información al arbol
             }
         }
-            /*
-            ArrayList leerVehiculo= calificaciones.get("90");
-            String y = graduado.getPromedio();
-            boolean x = calificaciones.exists(y);
-            System.out.println(x + "  (" + y);
-            */
-        }
-
-
-        //if(calificaciones.exists(graduado.getPromedio())){
-        //  ArrayList leerGraduado = calificaciones.get(graduado.getPromedio());
-        //leerGraduado.add(graduado.getIndice());
-
-        //}else{
-        //  System.out.println("p"+graduado.getIndice());
-        //ArrayList aux = new ArrayList<>();
-        //aux.add(graduado.getIndice());
-        //calificaciones.agregar(graduado.getPromedio(), aux);
-        //}
-        //}
-
+    }
 
     public void listar() throws SerializadorException {
         List<ArrayList<Integer>> lista = cal.listar();
