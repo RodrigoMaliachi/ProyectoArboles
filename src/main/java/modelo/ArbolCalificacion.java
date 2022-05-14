@@ -26,9 +26,13 @@ public class ArbolCalificacion {
         for (Graduado graduado : listaa) {
             String cadena = graduado.getPromedio();
             if(cal.exists(cadena)){
-              ArrayList<Integer> leerGraduado = cal.get(graduado.getPromedio());
-              leerGraduado.add(graduado.getIndice());
-                System.out.println("e"+graduado.getIndice()+leerGraduado);
+                int aux2 = graduado.getIndice();
+               //cal.get(graduado.getPromedio()).add(aux2);
+                ArrayList<Integer> aux3 = new ArrayList<>();
+                aux3 =(ArrayList<Integer>) cal.get(graduado.getPromedio()).clone();
+                aux3.add(aux2);
+               cal.modificar(cadena,aux3);
+                System.out.println("e"+graduado.getIndice()+" "+cal.get(graduado.getPromedio()));
             }else{
               System.out.println("p"+graduado.getIndice());
               //ListaSimple aux = new ListaSimple();

@@ -9,7 +9,7 @@ public class Test {
         archi.leerArchivoCSV("Egresadostxt.txt");
 
         ArbolCalificacion arbolCalificacion = new ArbolCalificacion();
-        arbolCalificacion.crearArbol(archi.getListaGraduado());
-        //arbolCalificacion.listar();
+        //arbolCalificacion.crearArbol(archi.getListaGraduado());
+        arbolCalificacion.listar();
     }
 }
