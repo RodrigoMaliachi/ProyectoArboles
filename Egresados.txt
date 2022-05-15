@@ -1,0 +1,626 @@
+1,Abril Guadalupe Escobedo Bojorquez,Licenciado en Derecho,77
+2,Adda Margarita Tello Camara,Contador Publico,87
+3,Adda Paulina Victoria Sanchez,Licenciado en Derecho,100
+4,Addy Erika Camacho Pat,Contador Publico,76
+5,Addy Rossana Campos Arceo,Licenciado en Derecho,70
+6,Addy Yolanda Cetina Manzanero,Cirujano Dentista,96
+7,Adlemy de Jesus Araujo Mendez,Especializacion en Medicina Interna,68
+8,Adlenir del Jesus Pena Cauich,Medico Veterinario Zootecnista,72
+9,Adolfo Antonio Peniche Guillermo,Contador Publico,68
+10,Adrian Felipe Chable Ayala,Licenciado en Derecho,60
+11,Adriana Lucia Guillermo Dimas,Arquitecto,65
+12,Aida Lopez Cervantes,Maestria en Arquitectura,70
+13,Ailyt Maria Pinto Mane,Licenciado en Educacion,84
+14,Alberto Gabriel Vega Poot,Ingeniero Fisico,93
+15,Alberto Jesus Barredo Lira,Arquitecto,99
+16,Aldo Gabriel Andrade Perez,Licenciado en Derecho,94
+17,Alejandra de Montserrat Preve Fernandez,Licenciado en Nutricion,82
+18,Alejandra Ivette Comas Carrillo,Contador Publico,63
+19,Alejandra Ruiz Mendez,Licenciado en Biologia,61
+20,Alejandra Tenorio Villanueva,Contador Publico,74
+21,Alejandro de la Cruz Solis Campos,Quimico Farmaceutico Biologo,87
+22,Alejandro Hernandez Valderrama,Licenciado en Psicologia,79
+23,Alejandro Vazquez Carrillo,Ingeniero Civil,91
+24,Alexander Rashid Espinosa Espinosa,Ingeniero Civil,62
+25,Alfonso Novelo Rico,Licenciado en Nutricion,84
+26,Alfredo Efrain Lugo Dominguez,Licenciado en Docencia,75
+27,Alfredo Vicente Briceno Perera,Contador Publico,94
+28,Alicia del Socorro Canche y Cano,Licenciado en Docencia,73
+29,Alicia Eugenia Barrera Puerto,Contador Publico,92
+30,Alicia Mercedes Perez Ramos,Licenciado en Educacion,86
+31,Alida Isabel Pasos Ruiz,Licenciado en Educacion,89
+32,Alma Beatriz Alcocer Can,Licenciado en Derecho,70
+33,Alma Karla Padilla Fleites,Licenciado en Educacion,64
+34,Alvar Roberto Esquivel Perez,Medico Veterinario Zootecnista,100
+35,Alvaro Buenaventura Perez Perez,Medico Cirujano,94
+36,Amal Chehade Sierra,Contador Publico,60
+37,Amalia Elizabeth Tejero Gonzalez,Ingeniero Civil,67
+38,Amilcar Ramses Aguilar Gonzalez,Maestria en Ciencias Quimicas,97
+39,Ana Laura Bojorquez Carrillo,Contador Publico,85
+40,Ana Lilia Montalvo Tun,Licenciado en Derecho,94
+41,Ana Maria Soto Alonzo,Contador Publico,66
+42,Ana Noemi Negron Bellew,Contador Publico,89
+43,Ana Paula Sanchez Camargo,Arquitecto,63
+44,Ana Rosa Lara Zapata,Licenciado en Derecho,99
+45,Andrea Josefina Sansores Ruz,Licenciado en Educacion,96
+46,Andres Coronado Peraza,Ingeniero Quimico Industrial,81
+47,Andy Roman Palomo Mena,Arquitecto,95
+48,Angel Alfredo Ake Chuc,Contador Publico,63
+49,Antonia Isabel Sierra Mena,Contador Publico,62
+50,Antonio Isidro Echeverria Sanchez,Licenciado en Enfermeria,83
+51,Antonio Pool Caamal,Contador Publico,87
+52,Arely Yazmin Koh Gongora,Licenciado en Derecho,76
+53,Armando Chim Canul,Contador Publico,89
+54,Armando de Jesus Quintal Rosado,Quimico Farmaceutico Biologo,94
+55,Artemio Alpizar Achurra,Ingeniero Civil,84
+56,Arturo Armando Martin Medina,Ingeniero Quimico Industrial,88
+57,Augusto Rafael Alcocer Pinzon,Licenciado en Ciencias de la Computacion,77
+58,Aurea Elena Sosa Zapata,Especializacion en Enfermeria Quirurgica,69
+59,Aurelia Marfil Manrique,Licenciado en Derecho,69
+60,Banci Enrique Torres Flores,Quimico Farmaceutico Biologo,79
+61,Beatriz del Rosario Perez Carrillo,Licenciado en Derecho,94
+62,Beatriz Eugenia Guzman Mendez,Quimico Industrial,66
+63,Berenice del Pilar Ferraez Diaz,Licenciado en Derecho,75
+64,Bernardo Fernandez Montufar,Ingeniero Quimico Industrial,78
+65,Bibiana Guadalupe Moo Diaz,Medico Cirujano,95
+66,Blanca Guadalupe Guardia Briceno,Contador Publico,94
+67,Blanca Macarena Garcia Rubio,Licenciado en Derecho,83
+68,Brenda Lucely Sulub Cupul,Cirujano Dentista,74
+69,Bruceli Octavio Hoil Contreras,Licenciado en Derecho,97
+70,Carlos Arturo Cardos Aldana,Licenciado en Derecho,100
+71,Carlos Jesus Solis Ramirez,Licenciado en Derecho,96
+72,Carlos Leopoldo Oyosa Ramos,Licenciado en Derecho,68
+73,Carlos Manuel Chan Chuil,Contador Publico,64
+74,Carlos Martin Solis Amaro,Especializacion en Docencia,65
+75,Carlos Ramiro Sosa Pacheco,Licenciado en Derecho,92
+76,Carolina Isabel Hernandez Rath,Arquitecto,90
+77,Cecilia del Socorro Romero Salazar,Contador Publico,93
+78,Cecilia Josefina Fuentes Bagundo,Contador Publico,86
+79,Celia Cabanas Leon,Licenciado en Ciencias de la Computacion,76
+80,Cesar Antonio Marin Pina,Licenciado en Economia,84
+81,Cesar Augusto Manzanero Aguirre,Ingeniero Civil,97
+82,Cesar Augusto Uicab Chan,Contador Publico,71
+83,Cesar Enrique Chan Chuil,Contador Publico,63
+84,Cesar Enrique Ferreyro Rosado,Licenciado en Derecho,98
+85,Cesar Fernando Fuentes Alvarado,Quimico Industrial,66
+86,Cintya Nieto Marin,Medico Veterinario Zootecnista,62
+87,Citlalli del Carmen Vera Ek,Contador Publico,63
+88,Claudia Concepcion Lopez Carrillo,Licenciado en Psicologia,95
+89,Claudia Guadalupe Peraza Pinzon,Contador Publico,90
+90,Claudia Ileana Pedrera Irabien,Licenciado en Derecho,91
+91,Claudia Maria Peniche Herrera,Licenciado en Derecho,100
+92,Claudia Primavera Canto Patron,Licenciado en Enfermeria,89
+93,Claudia Veronica Aguilar Acevedo,Licenciado en Derecho,98
+94,Claudine Berenice Gil Perez,Licenciado en Nutricion,80
+95,Concepcion del Carmen Ramirez Murillo,Especializacion en Medicina del Deporte,73
+96,Coral del Carmen Cruz Balderas,Contador Publico,85
+97,Cristina Guadalupe Garcia Estrella,Contador Publico,95
+98,Cristina Ruiz Rosado,Licenciado en Derecho,82
+99,Cristina Salome Moreno Osorio,Licenciado en Psicologia,94
+100,Cruz Miguel Angel Aguilar Cruz,Cirujano Dentista,97
+101,Dalia Adelaida Canul Rosado,Quimico Farmaceutico Biologo,92
+102,Dalia Grisel Dzib Ojeda,Medico Veterinario Zootecnista,74
+103,Danette Ortegon Aznar,Ingeniero Quimico Industrial,99
+104,Daniel Alejandro Solis Frayde,Licenciado en Derecho,85
+105,Daniel Antonino Gomez Aguilar,Contador Publico,92
+106,Daniel Habib Lizama Gongora,Ingeniero Civil,72
+107,Daniela Guadalupe Gasque Toraya,Licenciado en Derecho,86
+108,David Antonio Rivera Arjona,Maestria en Arquitectura,91
+109,David Armando Tuyu Torres,Licenciado en Derecho,86
+110,Deysi Margarita Hernandez Sanchez,Licenciado en Derecho,88
+111,Diana Eunice Bagundo Crespo,Cirujano Dentista,90
+112,Dieter Gerardo Ponce Martinez,Licenciado en Derecho,69
+113,Donato del Jesus Chulim Ceballos,Contador Publico,100
+114,Doris Elisa Lopez Ruiz,Contador Publico,71
+115,Eddy Nelson del Jesus Rubio Solis,Especializacion en Medicina Interna,98
+116,Edgar Eduardo Tristan Cordero,Ingeniero Civil,91
+117,Edgar Jose Chi May,Contador Publico,73
+118,Edgar Manuel Lopez Munoz,Licenciado en Derecho,88
+119,Edgar Quiroz Ramos,Especializacion en Pediatria,75
+120,Edgardo Jesus Martinez Duarte,Licenciado en Derecho,65
+121,Edith Veronica Ayala Castillo,Quimico Industrial,71
+122,Eduardo Jose Mendez Ojeda,Contador Publico,98
+123,Eduardo Manuel Rio Aguilar,Medico Veterinario Zootecnista,64
+124,Edward Daniel Parra Ortiz,Contador Publico,100
+125,Edwin Jesus Leon Bojorquez,Licenciado en Ciencias de la Computacion,86
+126,Edwyn Azael Patron Perez,Ingeniero Civil,71
+127,Eileen Torres Dominguez,Licenciado en Derecho,74
+128,Elda Guadalupe del Carmen Alvarez Berzunza,Licenciado en Enfermeria (curso complementario),100
+129,Elia Suhail de la Cruz Torres Cardena,Contador Publico,100
+130,Elias Marcelino Cuevas Sosa,Maestria en Ingenieria - Ambiental,98
+131,Elma Ivonne Solis Martinez,Contador Publico,71
+132,Elsy Beatris Poot Canche,Contador Publico,79
+133,Elsy Maria Rosales Uc,Maestria en Ingenieria - Ambiental,96
+134,Ely Georgina de Anda Tovar,Contador Publico,77
+135,Emilio de Jesus Ek Pech,Contador Publico,79
+136,Ena del Rosario Ramirez Ceballos,Licenciado en Derecho,83
+137,Ena Karina Marrufo Sanchez,Contador Publico,92
+138,Enrique Alfonso Castillo Lopez,Especializacion en Derecho Penal,97
+139,Enrique Francisco Paredes Solis,Especializacion en Finanzas,83
+140,Enrique G. Ortiz Padilla,Licenciado en Economia,67
+141,Eraclio del Jesus Cruz Pacheco,Maestria en Economia y Administracion Publica,88
+142,Erick Humberto Olvera Tec,Licenciado en Derecho,70
+143,Erick Jafeth Lopez Perez,Contador Publico,83
+144,Erik Paul Alcocer Franco,Contador Publico,64
+145,Erik Salomon Moyao Cruz,Arquitecto,61
+146,Erika Alejandra Perera Pacheco,Licenciado en Derecho,97
+147,Erika Alpizar Lara,Quimico Industrial,72
+148,Erika Elena Varguez Cervera,Contador Publico,87
+149,Ernesto Fernando Casares Castro,Contador Publico,76
+150,Erwin Rigel Vinas Barrera,Contador Publico,85
+151,Esmeralda Patricia Garcia Estrada,Contador Publico,73
+152,Esteban Miguel Perez Gongora,Ingeniero Civil,93
+153,Estrella Margarita Campos Cetina,Contador Publico,62
+154,Eunice Estrella Campos Nah,Licenciado en Nutricion,98
+155,Eva Gabriela Romo Lopez,Quimico Industrial,78
+156,Eva Maria Moreno Anaya,Especializacion en Anestesiologia,75
+157,Evelin Alejandra Cen Bacelis,Licenciado en Derecho,73
+158,Ezequiel Galvan Vazquez,Especializacion en Finanzas,71
+159,Fabian Suchite Magana,Contador Publico,80
+160,Fabiola Beatriz Cabrera Quijano,Licenciado en Derecho,81
+161,Fatima Georgina Fernandez Flores,Contador Publico,80
+162,Fausto German Madera Mezquita,Medico Cirujano,64
+163,Federico Adolfo Berzunza Escaroz,Licenciado en Docencia,66
+164,Felipe Colli Cuevas,Ingeniero Civil,91
+165,Felipe de Jesus Escalante Bolio,Contador Publico,90
+166,Felipe Reyes Tuz Poot,Licenciado en Matematicas,80
+167,Fernando Aurelio Centeno Aragon,Licenciado en Educacion,92
+168,Fernando Jose Ayuso Navarrete,Contador Publico,99
+169,Fernando Rodriguez Quijano,Ingeniero Civil,97
+170,Florencia Patricia Portillo Melendez,Especializacion en Endodoncia,63
+171,Francia Isabel Rodriguez Suarez,Licenciado en Nutricion,100
+172,Francisco Alejandro Puerto Castillo,Contador Publico,75
+173,Francisco de Jesus Manzanilla Molina,Contador Publico,94
+174,Francisco Edilberto Calderon Loeza,Licenciado en Derecho,65
+175,Francisco Enrique Ayuso Blanco,Ingeniero Civil,62
+176,Francisco German Salazar Estrada,Ingeniero Civil,82
+177,Francisco Javier Canche Dominguez,Arquitecto,69
+178,Francisco Javier Gamboa Cauich,Contador Publico,67
+179,Francisco Javier Poot Peet,Contador Publico,98
+180,Francisco Javier Ruiz Pacheco,Medico Veterinario Zootecnista,67
+181,Francisco Rafael Mena Chiu,Licenciado en Educacion,93
+182,Freddy Abel Gamboa Azcorra,Licenciado en Derecho,86
+183,Freddy Daniel Campos Tamayo,Quimico Farmaceutico Biologo,90
+184,Freddy Ricardo Ojeda Medina,Licenciado en Derecho,63
+185,Frine Merari del Rosario Puga Escalante,Licenciado en Derecho,88
+186,Gabriel de Jesus Magana Villegas,Licenciado en Derecho,90
+187,Gabriel Ricardo Mena Contreras,Medico Veterinario Zootecnista,82
+188,Gabriela Isabel Lopez Suarez,Licenciado en Derecho,74
+189,Gabriela Maria de los Angeles Ochoa Ruiz,Maestria en Odontologia Infantil,65
+190,Gabriela Maria Escalante Martin,Licenciado en Derecho,69
+191,Gabriela Peraza Gonzalez,Licenciado en Derecho,82
+192,Gaspar Antonio Barrera Paz,Especializacion en Medicina del Deporte,85
+193,Gaspar Manuel Parra Bracamonte,Medico Veterinario Zootecnista,77
+194,Gelmy Margarita Carrillo Centurion,Contador Publico,98
+195,Genaro de Jesus Soberanis Quijano,Contador Publico,61
+196,Genny Guadalupe Can Euan,Contador Publico,99
+197,Gerardo Antonio Arceo Martinez,Contador Publico,98
+198,Gerardo Peniche Manzanares,Cirujano Dentista,99
+199,Gervin Jesus Aviles Aviles,Ingeniero Civil,75
+200,Gilmer Antonio Dzib Canche,Licenciado en Enfermeria,63
+201,Gladis Josefina Manzanero Medina,Medico Cirujano,99
+202,Graciella del Socorro Contreras Carvajal,Contador Publico,74
+203,Gregorio Trejo Can,Licenciado en Derecho,64
+204,Grettel Giovanna Escalante Rendis,Licenciado en Derecho,93
+205,Guadalupe Ayora Talavera,Licenciado en Biologia,88
+206,Guadalupe del Carmen Zavala Flores,Arquitecto,97
+207,Guadalupe del Coral Montes de Oca Montero,Medico Veterinario Zootecnista,85
+208,Guadalupe del Rocio Madariaga Puc,Licenciado en Derecho,99
+209,Guadalupe Juana Cardos Santoyo,Contador Publico,66
+210,Guillermo Eduardo Sanchez Carrillo,Licenciado en Derecho,63
+211,Guillermo Perez Medina,Arquitecto,80
+212,Gumersindo Miron Lopez,Quimico Biologo Bromatologo,89
+213,Gustavo Ruz Osorio,Contador Publico,66
+214,Habsi Frine Simon Farah,Licenciado en Docencia,78
+215,Haddla Trejo Memeri,Licenciado en Nutricion,60
+216,Hector Eduardo Aguilar Lizama,Contador Publico,91
+217,Helena Rivero Evia,Licenciado en Derecho,72
+218,Henry Manuel Jesus Fernandez Ortiz,Especializacion en Ginecologia y Obstetricia,73
+219,Herbe Severo Huchim Valdez,Contador Publico,92
+220,Horacio Gerardo Bautista Morales,Especializacion en Anestesiologia,78
+221,Hugo Alejandro Sansores Perez,Medico Veterinario Zootecnista,97
+222,Humberto Cruz Hernandez,Maestria en Ciencia y Tecnologia de Alimentos,60
+223,Ignacio de Jesus Arjona Estrella,Ingeniero Civil,99
+224,Ileana Baeza Lope,Licenciado en Educacion,82
+225,Ileana Hernandez Pech,Licenciado en Economia,64
+226,Irasema Mirle Villanueva Azcorra,Contador Publico,99
+227,Irene Alicia Gonzalez Vazquez,Contador Publico,72
+228,Irene del Carmen Cetina Rivera,Licenciado en Educacion,69
+229,Irene del Rocio Cauich Escobedo,Licenciado en Derecho,99
+230,Irene Isabel Borges Castillo,Maestria en Educacion Superior,97
+231,Irma Andrea Pavon Cruz,Contador Publico,72
+232,Irma del Carmen Lopez Noya,Medico Cirujano,86
+233,Isaac Aguilar Reyes,Licenciado en Enfermeria,72
+234,Isaias Francisco Tamay Ek,Ingeniero Civil,67
+235,Ismael Charruf Villanueva,Contador Publico,74
+236,Ismael Salazar Hoyos,Cirujano Dentista,68
+237,Israel Armando Albornoz Ricalde,Ingeniero Civil,73
+238,Israel Augusto Nabte Rodriguez,Contador Publico,94
+239,Ivan Ulises Dominguez Llanes,Contador Publico,83
+240,Ivette Ordaz Lopez,Medico Cirujano,64
+241,Ivonne Lizarraga Navarrete,Licenciado en Educacion,93
+242,Javier Alberto Quijano Molina,Medico Cirujano,88
+243,Javier Alejandro Flores Solis,Ingeniero Quimico Industrial,77
+244,Javier Geovani Gomez Canto,Medico Veterinario Zootecnista,70
+245,Javier Renan Rosel Gomez,Medico Veterinario Zootecnista,70
+246,Javier Ricardo Borges Solis,Cirujano Dentista,71
+247,Jesus Antonio Campo Marrufo,Contador Publico,97
+248,Jesus Aquiles Sologuren Perez,Licenciado en Derecho,85
+249,Jesus Eduardo Vazquez Canche,Contador Publico,62
+250,Jimena Gutierrez Camara,Arquitecto,62
+251,Jimmy Humberto Martinez Rodriguez,Licenciado en Derecho,95
+252,Joaquin Gabriel Miranda Mena,Ingeniero Fisico,89
+253,Joel Armando Ruiz Robertos,Medico Cirujano,63
+254,Johnny Alexander Burgos Narvaez,Contador Publico,63
+255,Jonatan Gonzalez Ahumada,Licenciado en Derecho,60
+256,Jorge Alberto Aguilar Montero,Licenciado en Derecho,99
+257,Jorge Alberto Cruz Chan,Licenciado en Derecho,68
+258,Jorge Alberto Lugo Osorio,Contador Publico,71
+259,Jorge Alejandro Medina Garcia,Ingeniero Fisico,94
+260,Jorge Alejandro Sanchez Celis,Licenciado en Derecho,78
+261,Jorge Antonio Zumarraga Novelo,Ingeniero Civil,85
+262,Jorge Ariel Torres Cosgaya,Quimico Farmaceutico Biologo,83
+263,Jorge Armando Tamayo Escalante,Contador Publico,66
+264,Jorge Arturo Concha Cruz,Contador Publico,78
+265,Jorge Arturo Gongora Echeverria,Medico Cirujano,66
+266,Jorge Augusto Gonzalez Romero,Contador Publico,94
+267,Jorge Camilo Gonzalez Mendoza,Licenciado en Economia,68
+268,Jorge Carlos Barrera Ruiz,Medico Cirujano,78
+269,Jorge Carlos Romero Gonzalez,Ingeniero Civil,67
+270,Jorge Carlos Yam Viana,Licenciado en Derecho,60
+271,Jorge David Fonz Estrada,Ingeniero Quimico Industrial,85
+272,Jorge Enrique Azcorra Varguez,Contador Publico,95
+273,Jorge Ivan Varguez Canul,Licenciado en Ciencias de la Computacion,100
+274,Jorge Javier Carrillo Gonzalez,Ingeniero Civil,85
+275,Jorge Luis Malvarez Ceballos,Quimico Farmaceutico Biologo,79
+276,Jorge Manuel Guzman Gonzalez,Licenciado en Derecho,63
+277,Jorge Ricardo Gomez Montalvo,Licenciado en Ciencias de la Computacion,93
+278,Jose Adrian Flores Plascencia,Arquitecto,73
+279,Jose Alejandro Chuc Dzul,Quimico Farmaceutico Biologo,89
+280,Jose Alejandro Diaz Carrillo,Licenciado en Derecho,85
+281,Jose Alejandro Novelo Cervera,Ingeniero Civil,90
+282,Jose Alfredo Cab Dzul,Cirujano Dentista,97
+283,Jose Alfredo Sabatini Casanova,Licenciado en Psicologia,75
+284,Jose Antonio Arceo Cervera,Licenciado en Derecho,80
+285,Jose Antonio Bojorquez Lopez,Maestria en Ingenieria - Construccion,99
+286,Jose Antonio Mex Yam,Ingeniero Civil,96
+287,Jose Ariel Camara Cortes,Licenciado en Educacion,86
+288,Jose Cupertino Moo Huchin,Quimico Farmaceutico Biologo,64
+289,Jose Felipe Pereira Sosa,Ingeniero Civil,76
+290,Jose Fernando Mendez Buenfil,Contador Publico,78
+291,Jose Francisco Montero Mena,Licenciado en Ciencias de la Computacion,66
+292,Jose Gabriel Rios Covian Vazquez,Ingeniero Quimico Industrial,88
+293,Jose Gabriel Sosa Castul,Ingeniero Civil,99
+294,Jose Genaro Cervera Montano,Licenciado en Derecho,68
+295,Jose Gregorio Alonzo Pech,Contador Publico,81
+296,Jose Guadalupe Chable Canche,Ingeniero Civil,77
+297,Jose Ines May Carballo,Ingeniero Civil,94
+298,Jose Javier Cahuich Chable,Especializacion en Medicina del Deporte,72
+299,Jose Jesus Martin Ortegon,Contador Publico,97
+300,Jose Luis Alcala Serur,Maestria en Arquitectura,90
+301,Jose Luis Lopez Martinez,Licenciado en Ciencias de la Computacion,71
+302,Jose Luis Trueba Sanlucar,Licenciado en Derecho,62
+303,Jose Maria Naal Castillo,Medico Veterinario Zootecnista,62
+304,Jose Maria Orozco Medina,Especializacion en Radiologia e Imaginologia,74
+305,Jose Maria Orozco Medina,Especializacion en Radiologia e Imaginologia,73
+306,Jose Martin Acevedo Arcique,Medico Veterinario Zootecnista,85
+307,Jose Mateo Ix Balam,Ingeniero Civil,83
+308,Jose Mauricio Maciel Lufan,Licenciado en Enfermeria,91
+309,Jose Octavio Macias Macias,Maestria en Ciencias en Apicultura Tropical,77
+310,Jose Ramon Campos Rabanales,Especializacion en Pediatria,90
+311,Jose Ricardo Rodriguez Puerto,Contador Publico,78
+312,Jose Roberto Ku Cauich,Quimico Farmaceutico Biologo,65
+313,Jose Roberto Pech Herrera,Licenciado en Ciencias de la Computacion,96
+314,Jose Valentin Cervantes Perez,Ingeniero Civil,72
+315,Jose Victor Canul Varguez,Quimico Industrial,79
+316,Josefa Perez Sanchez,Maestria en Economia y Administracion Publica,61
+317,Joyce Consuelo Magana Martinez,Especializacion en Medicina Interna,85
+318,Juan Antonio Alam y Alam,Licenciado en Matematicas,63
+319,Juan Carlos Balam Naal,Contador Publico,68
+320,Juan Carlos Moreno Manrique,Especializacion en Pediatria,87
+321,Juan Carlos Perez Osorio,Contador Publico,92
+322,Juan Francisco Castillo Rodriguez,Licenciado en Derecho,71
+323,Juan Francisco Valle Chable,Contador Publico,76
+324,Juan Gabriel Sanchez Alvarez,Ingeniero Civil,90
+325,Juan Gabriel Segovia Paredes,Contador Publico,66
+326,Juan Jorge Farah Paredes,Licenciado en Derecho,93
+327,Juan Jose Gerardo Larios Robles Gil,Ingeniero Civil,63
+328,Juan Manuel Brito Segura,Contador Publico,78
+329,Julia Arely Gonzalez Canul,Contador Publico,86
+330,Julio Cesar Castro Alejos,Licenciado en Derecho,75
+331,Julio Cesar Duarte Herrera,Licenciado en Derecho,70
+332,Julio Cesar Gonzalez Villanueva,Contador Publico,99
+333,Julio Cesar Gutierrez Cetina,Medico Veterinario Zootecnista,77
+334,Julio Cesar Leon Espinosa,Contador Publico,75
+335,Julissa Aceneth Ortiz Mendoza,Cirujano Dentista,70
+336,Junia Fabiola Lopez Gamboa,Contador Publico,66
+337,Karim Josue Herrera Simon,Licenciado en Educacion,70
+338,Karime Abud Camara,Especializacion en Psicologia Clinica Infantil,84
+339,Karina del Socorro Vazquez Canul,Contador Publico,63
+340,Karina Guadalupe Gomez Quinones,Contador Publico,74
+341,Karla Beatriz Beltran Magana,Licenciado en Ciencias de la Computacion,92
+342,Karla Beatriz Cantun Avila,Ingeniero Fisico,61
+343,Karla del Jesus Valle Ricalde,Contador Publico,74
+344,Karla Duarte Pinzon,Licenciado en Nutricion,95
+345,Karla Patricia Cherris Caceres,Contador Publico,93
+346,Karola Yolizma Mena Novelo,Contador Publico,65
+347,Katia Concepcion Poot Rodriguez,Contador Publico,89
+348,Landy Eugenia Castro Fuentes,Ingeniero Quimico Industrial,76
+349,Laura Alejandrina Pinzon Aranda,Contador Publico,92
+350,Laura Maria Saenz Cetina,Maestria en Arquitectura,82
+351,Laura Teresa Mass Gongora,Licenciado en Nutricion,77
+352,Leidy del Rosario Dominguez Rosado,Licenciado en Derecho,87
+353,Leiver Cristobal Ceron Paredes,Contador Publico,68
+354,Lenni Judith Rivera Manrique,Contador Publico,66
+355,Lenny Beatriz Gonzalez Chi,Medico Veterinario Zootecnista,79
+356,Leticia del Pilar Camara Euan,Ingeniero Civil,62
+357,Leticia Dolores Mendoza Alcocer,Maestria en Economia y Administracion Publica,73
+358,Leydi Yanet Ramirez Gonzalez,Contador Publico,92
+359,Lidia Liliana Zapata Bacelis,Contador Publico,76
+360,Lidia Maria Dzul Nunez,Especializacion en Anestesiologia,100
+361,Lilia Angelica Flores Sosa,Licenciado en Derecho,87
+362,Lilia del Pilar Ramirez Martinez,Licenciado en Derecho,64
+363,Lilia Margarita Cabrera Herrera,Enfermero,97
+364,Liliana Guadalupe Menendez Ceballos,Licenciado en Derecho,62
+365,Lisset Rossana del Socorro Guzman Mendoza,Contador Publico,66
+366,Lizbeth Eugenia Guillen Iuit,Licenciado en Educacion,89
+367,Lizbeth Marine Briceno Quijano,Cirujano Dentista,98
+368,Lizette Yasmin Tzab Hernandez,Licenciado en Educacion,74
+369,Lizzet del Rosario Lira Castro,Contador Publico,63
+370,Lorena de la Luz Ravell Plancarte,Contador Publico,75
+371,Lourdes Mayanin Peraza Leal,Contador Publico,81
+372,Lucia Alejandra Camacho Mukul,Contador Publico,89
+373,Lucia Belen Gamboa Salazar,Licenciado en Matematicas,65
+374,Lucia de los Angeles Mendez Chan,Licenciado en Derecho,96
+375,Luis Alberto Anguas Miranda,Contador Publico,61
+376,Luis Alberto Yver Ake,Contador Publico,81
+377,Luis Felipe Chan Velazco,Contador Publico,64
+378,Luis Fernando Alcocer Medina,Contador Publico,61
+379,Luis Fernando Hernandez Moguel,Licenciado en Matematicas,96
+380,Luis Guillermo Paredes Gomez,Contador Publico,83
+381,Luis Miguel Alcocer Fernandez,Contador Publico,79
+382,Luis Ramiro Basto Diaz,Licenciado en Ciencias de la Computacion,96
+383,Lydia Brogan Pulido,Licenciado en Derecho,61
+384,Magda Yolanda Leon Cen,Quimico Farmaceutico Biologo,73
+385,Magdalena del Socorro Moreno Tec,Licenciado en Enfermeria,80
+386,Magnolia del Carmen Tzec Gamboa,Quimico Biologo Bromatologo,92
+387,Mandy Abigain May Poot,Enfermero,92
+388,Manuel Alberto Castillo Mendez,Licenciado en Biologia,69
+389,Manuel Antonio Espinosa Avila,Ingeniero Civil,78
+390,Manuel Antonio Rodriguez Rodriguez,Contador Publico,83
+391,Manuel Arturo Barrera Ceballos,Ingeniero Civil,84
+392,Manuel Cordova Tejero,Medico Cirujano,68
+393,Manuel Hernando Alvarez Loeza,Licenciado en Derecho,72
+394,Manuel Jesus Cetina Gonzalez,Licenciado en Economia,63
+395,Manuel Jesus Dominguez Sanchez,Ingeniero Quimico Industrial,66
+396,Manuel Jesus Dzib Canto,Contador Publico,69
+397,Manuel Jesus Dzul Poot,Licenciado en Derecho,87
+398,Manuel Jesus Leon Carrillo,Licenciado en Derecho,83
+399,Manuel Jesus Madera Valencia,Contador Publico,78
+400,Manuel Jesus Martin Suaste,Contador Publico,92
+401,Manuel Ricardo Pereira Pech,Ingeniero Civil,95
+402,Manuela de Jesus Cabrera Montejo,Licenciado en Derecho,79
+403,Marco Antonio Flores Chan,Contador Publico,70
+404,Marco Vinicio Sierra Medina,Licenciado en Ciencias de la Computacion,63
+405,Marcos Antonio Vega Vega,Ingeniero Civil,68
+406,Marcos Ariel Barredo Cura,Arquitecto,78
+407,Maria Beatriz Munoz Castillo,Licenciado en Derecho,91
+408,Maria Candelaria Baquedano May,Medico Cirujano,100
+409,Maria Concepcion Gamboa Lizama,Licenciado en Docencia,89
+410,Maria de Guadalupe Guillermo Cordero,Contador Publico,68
+411,Maria de la Luz Machiavelo Salinas,Maestria en Arquitectura,94
+412,Maria de los Angeles Martin Moguel,Licenciado en Derecho,61
+413,Maria de los Angeles Narvaez Morales,Licenciado en Derecho,76
+414,Maria de los Milagros Esquivel Cobos,Cirujano Dentista,82
+415,Maria del Carmen Barragan Figueroa,Licenciado en Derecho,79
+416,Maria del Carmen Castillo Castillo,Contador Publico,77
+417,Maria del Pilar Diaz Ceh,Quimico Farmaceutico Biologo,90
+418,Maria del Pilar Flores Machado,Licenciado en Biologia,76
+419,Maria del Refugio Ake Chuc,Licenciado en Derecho,80
+420,Maria del Socorro Briceno Cauich,Contador Publico,83
+421,Maria Dolores Herrera Salvador,Licenciado en Matematicas,71
+422,Maria Elena Granados Castellanos,Ingeniero Quimico Industrial,66
+423,Maria Emelina Suarez Perez,Especializacion en Salud Publica,81
+424,Maria Guadalupe Kantun Cruz,Quimico Farmaceutico Biologo,66
+425,Maria Isabel Mendez Cime,Contador Publico,76
+426,Maria Jaqueline Sanchez Mayen,Quimico Industrial,75
+427,Maria Jose Garcia Casellas,Contador Publico,80
+428,Maria Jose Gurubel Iuit,Contador Publico,89
+429,Maria Jose Gutierrez Cuxim,Licenciado en Nutricion,87
+430,Maria Jose Miguel Vazquez,Licenciado en Nutricion,99
+431,Maria Jose Molina Arce,Licenciado en Derecho,94
+432,Maria Jose Pantoja Cocom,Contador Publico,86
+433,Maria Karla Garcia Estrada,Contador Publico,90
+434,Maria Laura Reyes Cardena,Licenciado en Derecho,76
+435,Maria Magaly Laynes Lopez,Licenciado en Psicologia,60
+436,Maria Mercedes Perez Villalobos,Licenciado en Ciencias de la Computacion,83
+437,Maria Susana Baqueiro Salazar,Licenciado en Psicologia,83
+438,Maria Yolanda Iuit Cetz,Quimico Industrial,63
+439,Maria Zenaida Rivera Quintal,Licenciado en Derecho,76
+440,Mariana Landeros Morales,Maestria en Arquitectura,73
+441,Mariel Belen Cachon de la Riva,Ingeniero Quimico Industrial,61
+442,Mariela de la Asuncion Chay Ek,Licenciado en Derecho,71
+443,Mariluz Canton Caceres,Especializacion en Docencia,66
+444,Marina Antonia Franco Pardenilla,Licenciado en Educacion,76
+445,Mario Alberto Montoya Martinez,Licenciado en Ciencias de la Computacion,74
+446,Mario Andres Perez Padilla,Licenciado en Derecho,94
+447,Mario David Alcala Dominguez,Contador Publico,65
+448,Mario Enrique Aguilar Canto,Licenciado en Derecho,74
+449,Mario Enrique Guzman Vega,Licenciado en Derecho,70
+450,Marisa del Socorro Zaldivar Acosta,Licenciado en Nutricion,86
+451,Marisol Barrera Berzunza,Licenciado en Derecho,90
+452,Marisol Contreras Contreras,Licenciado en Derecho,75
+453,Marisol Sthaydy Bustillos Chan,Arquitecto,91
+454,Marlon Fernely Espinola Panti,Licenciado en Ciencias de la Computacion,91
+455,Martha Dolores Martin Gil,Contador Publico,60
+456,Martha Eugenia Barrera Bustillos,Especializacion en Medicina del Deporte,91
+457,Martha Patricia Baas Kantun,Licenciado en Derecho,98
+458,Martha Patricia Valdes Gamboa,Licenciado en Educacion,97
+459,Martha Sanchez Meza,Arquitecto,84
+460,Martin Joel Montejo Ventura,Licenciado en Derecho,87
+461,Martina del Socorro Gomez Blanco,Licenciado en Derecho,90
+462,Mary Carmen Enriquez Dominguez,Contador Publico,82
+463,Mauricio Andres Pech Lopez,Quimico Industrial,63
+464,Mauricio Hiram Ruz Alcocer,Contador Publico,67
+465,Mauricio Navarrete Peraza,Arquitecto,84
+466,Mauricio Sahui Rivero,Licenciado en Derecho,99
+467,Mauro Bernabe Sanchez Balam,Medico Veterinario Zootecnista,78
+468,Mercedes Montalvo Lopez,Contador Publico,61
+469,Merly del Rosario Sansores Mena,Licenciado en Enfermeria (curso complementario),77
+470,Midori Lizette Cordova Quintal,Ingeniero Civil,63
+471,Miguel Alfredo Gomez Zozaya,Licenciado en Derecho,80
+472,Miguel Angel Alvidres Quijano,Licenciado en Derecho,80
+473,Miguel Angel Bacab Can,Especializacion en Radiologia e Imaginologia,62
+474,Miguel Angel Chavez Flores,Licenciado en Ciencias de la Computacion,80
+475,Miguel Angel Flores Guerra,Licenciado en Educacion,60
+476,Miguel Antonio Budip Ancona,Licenciado en Ciencias de la Computacion,62
+477,Miguel Arcangel de Jesus Cano Chale,Arquitecto,83
+478,Miguel Francisco Espinosa Cervera,Licenciado en Derecho,95
+479,Miguel Francisco Juarez Lugo,Contador Publico,64
+480,Minerva Ku Llanes,Contador Publico,100
+481,Moises Almeida Maldonado,Licenciado en Derecho,88
+482,Moises Daniel Hernandez Ake,Maestria en Ingenieria - Construccion,92
+483,Monica Karina Castorena Chavez,Contador Publico,96
+484,Monica Rios Pacheco,Especializacion en Cirugia General,95
+485,Myrna Guadalupe Cortes Ortiz,Licenciado en Derecho,61
+486,Naomi Haidee Sosa Solis,Licenciado en Docencia,98
+487,Narda Concepcion Dzib Uribe,Licenciado en Educacion,97
+488,Negi Couoh Barbosa,Licenciado en Derecho,98
+489,Netzahualcoyotl Gaspar May Trejo,Medico Veterinario Zootecnista,63
+490,Nidia Adriana Escamilla Aznar,Licenciado en Nutricion,91
+491,Noemy Guadalupe May Cocom,Contador Publico,92
+492,Ofelia del Rosario Cano Vela,Licenciado en Educacion,72
+493,Omar Alfredo Brito Marrufo,Contador Publico,96
+494,Omar Sinohue Salinas Bastarrachea,Ingeniero Quimico Industrial,83
+495,Orlando Alberto Gomez Martin,Ingeniero Civil,88
+496,Oscar Adrian Lopez Cruz,Arquitecto,99
+497,Oscar Alejandro Ortiz de Ora Irigoyen,Arquitecto,90
+498,Oscar Angel Agustin Chan Solis,Contador Publico,82
+499,Oswaldo Atocha Valencia Palma,Contador Publico,78
+500,Othon Banos Lopez,Licenciado en Biologia,69
+501,Pablo Antonio Cicero Alonzo,Licenciado en Derecho,95
+502,Patricia Borjas Ale,Especializacion en Pediatria,78
+503,Patricia Elizabeth Canto Estrella,Licenciado en Derecho,100
+504,Patricia Isabel Medina Bojorquez,Licenciado en Educacion,65
+505,Patricia Jacqueline Garcia Chuc,Licenciado en Derecho,90
+506,Patricia Ramirez Villanueva,Contador Publico,62
+507,Paula Maria de Jesus Rojas Quezada,Contador Publico,84
+508,Pedro Augusto Bojorquez Marrufo,Arquitecto,61
+509,Pedro Eduardo Chuil Valle,Licenciado en Derecho,81
+510,Pedro Ivan Arias Vazquez,Especializacion en Medicina del Deporte,87
+511,Pedro Julian Medina Navarrete,Licenciado en Derecho,82
+512,Pedro Lopez Acosta,Contador Publico,71
+513,Pedro Ricardo Aquino Hernandez,Quimico Farmaceutico Biologo,68
+514,Raciel Javier Estrada Leon,Medico Veterinario Zootecnista,65
+515,Rafael Antonio Carrillo Noh,Contador Publico,85
+516,Rafael Arenas Plante,Especializacion en Medicina del Deporte,63
+517,Rafael Casares Salazar,Ingeniero Civil,89
+518,Ramses Acal Cardona,Licenciado en Derecho,99
+519,Raul Adrian Cambranis Arjona,Licenciado en Derecho,88
+520,Raul Amilcar Santos Magana,Ingeniero Fisico,74
+521,Raul Fernando Negron Cancino,Medico Veterinario Zootecnista,64
+522,Raul Humberto Arana Traconis,Ingeniero Civil,97
+523,Raul Omar Ortega Lopez,Maestria en Ingenieria - Construccion,97
+524,Raul Rene Landero Mendez,Contador Publico,71
+525,Raymundo de Atocha Ricalde Quintal,Ingeniero Civil,81
+526,Rebeca Eugenia Chuc Echeverria,Contador Publico,91
+527,Rebeca Margarita Preciat Cervera,Contador Publico,66
+528,Reinaldo Novelo Herrera,Licenciado en Psicologia,85
+529,Renan Martin Cauich Duran,Licenciado en Derecho,70
+530,Rene Ovidio Espinosa Franco,Ingeniero Civil,76
+531,Reyes Edgardo Arteaga Tamayo,Arquitecto,62
+532,Reyes Rogelio Cortes Moguel,Licenciado en Derecho,62
+533,Reyna Maria Santos Uc,Licenciado en Derecho,72
+534,Ricardo Ernesto Recio Martinez,Quimico Industrial,70
+535,Ricardo Javier Mis Fernandez,Quimico Industrial,77
+536,Rita Alejandra Marquez Arcila,Licenciado en Derecho,69
+537,Rita Maria Nahuat Dzib,Ingeniero Civil,74
+538,Ritha Adriana Arcique Rosado,Licenciado en Derecho,70
+539,Robert Magdaleno Zavala Cardenas,Contador Publico,78
+540,Roberto Augusto Castellanos Gonzalez,Licenciado en Derecho,69
+541,Roberto Jose Quintal Novelo,Ingeniero Civil,61
+542,Roberto Lopez Karam,Licenciado en Derecho,86
+543,Roberto Lugo Aguilar,Contador Publico,97
+544,Roberto Maldonado Peraza,Ingeniero Civil,69
+545,Rocio Aguiar Sierra,Doctorado en Educacion Superior,92
+546,Rocio Argelia Munoz Meda,Medico Cirujano,73
+547,Rocio Franco Segura,Especializacion en Medicina Familiar,78
+548,Rocio Guadalupe Canul Medina,Contador Publico,74
+549,Rodolfo de la Cruz Cervantes Manzanilla,Licenciado en Derecho,84
+550,Rogelio Ignacio Mis Cu,Contador Publico,61
+551,Roger Manuel Alonzo Pech,Licenciado en Derecho,87
+552,Rolando Antonio Vizcarra Cardena,Contador Publico,66
+553,Rolando Concepcion Cetina Cruz,Contador Publico,76
+554,Romeo Rubio Gonzalez,Medico Veterinario Zootecnista,81
+555,Rosa Aurora Leon Narvaez,Contador Publico,64
+556,Rosa Elena Balam Dzib,Licenciado en Derecho,71
+557,Rosa Isabel De la Fuente Hernandez,Licenciado en Economia,80
+558,Rosa Maria Gonzalez Marin,Licenciado en Biologia,69
+559,Rosa Maria Pino Urtecho,Contador Publico,92
+560,Rosa Ofelia Antonio Vidales,Quimico Farmaceutico Biologo,85
+561,Rosalva de los Angeles Castillo Millan,Licenciado en Derecho,69
+562,Rosario Centeno Osorio,Contador Publico,64
+563,Rosario del Socorro Santoyo Cruz,Especializacion en Pediatria,66
+564,Roselbede Jose Perez Escalante,Cirujano Dentista,78
+565,Ruben Dario Parra Canto,Medico Veterinario Zootecnista,95
+566,Rufino de Jesus May Uuh,Especializacion en Medicina del Deporte,97
+567,Salvador Alberto Pereira Pech,Ingeniero Quimico Industrial,61
+568,Samuel Jesus Velazquez Solis,Contador Publico,78
+569,Sandra Evelia Fuentes Lunfan,Licenciado en Derecho,64
+570,Sandra Luz Terwogt Calero,Especializacion en Ginecologia y Obstetricia,75
+571,Santiago Agustin Canche Millan,Contador Publico,79
+572,Saride Vanessa Xacur Lujano,Ingeniero Civil,76
+573,Saul Francisco Uc Moo,Licenciado en Derecho,78
+574,Seidy Yolanda Castillo Pool,Contador Publico,97
+575,Sergio Bogar Cuevas Gonzalez,Licenciado en Derecho,79
+576,Sergio Humberto Quinonez Pech,Licenciado en Educacion,76
+577,Sergio Omar Pool Tun,Contador Publico,88
+578,Sergio Rafael Estrella Lizama,Medico Cirujano,64
+579,Sergio Rene Estrada Santos,Medico Veterinario Zootecnista,93
+580,Servio Tulio Rosado Perez,Licenciado en Derecho,91
+581,Sheila Isabel Irigoyen Zozaya,Arquitecto,83
+582,Sheila Isela Cauich Leon,Contador Publico,64
+583,Sidney Mendiburu Reyes,Contador Publico,62
+584,Silvia Carolina Escobedo Salazar,Contador Publico,68
+585,Silvia del Rosario Madera Solis,Licenciado en Derecho,93
+586,Silvia Engracia Chan Nieves,Licenciado en Derecho,92
+587,Silvia Mariana Alvarez Diaz,Contador Publico,84
+588,Sofia Elena Camara Gamboa,Licenciado en Derecho,61
+589,Sonia Eugenia Herrera Ramirez,Contador Publico,60
+590,Suemi de Jesus Gongora Ceron,Contador Publico,94
+591,Suemy del Rosario Lizama Sanchez,Licenciado en Derecho,92
+592,Suemy Maricela Ek Avila,Licenciado en Derecho,62
+593,Sugey Guadalupe Vazquez Sosa,Contador Publico,72
+594,Susana Aydee Cicero Canto,Licenciado en Biologia,92
+595,Tania Gonzalez Gonzalez,Licenciado en Derecho,88
+596,Tania Guadalupe Polanco Lugo,Quimico Industrial,86
+597,Tatiana Gisela Kau Gutierrez,Licenciado en Derecho,96
+598,Teresita del Socorro Carrillo Aviles,Quimico Farmaceutico Biologo,88
+599,Tiberio Cabrera Rioscovian,Licenciado en Derecho,93
+600,Tito Moises Cutz Pool,Licenciado en Derecho,91
+601,Victor Hugo Lira Zumbardo,Medico Cirujano,75
+602,Victor Hugo Rodriguez Vera,Licenciado en Derecho,78
+603,Victor Manuel Marave Sosa,Licenciado en Derecho,63
+604,Victor Manuel Mendoza Quintal,Licenciado en Derecho,61
+605,Victoria del Socorro Vazquez Rojas,Contador Publico,78
+606,Virginia Marilu Segovia Pinelo,Licenciado en Ciencias de la Computacion,90
+607,Wendy Aracelly Baquedano Villegas,Cirujano Dentista,95
+608,Wendy Estela Eb Novelo,Contador Publico,72
+609,Wendy Janet Ordaz Gonzalez,Licenciado en Economia,85
+610,Wendy Maria Carrillo Dzib,Licenciado en Derecho,90
+611,Wendy Maribel Canche Leon,Arquitecto,68
+612,Wendy Melina Gutierrez Padilla,Licenciado en Derecho,73
+613,Wendy Zacil Chi May,Contador Publico,96
+614,Wilberth Ivan Aguayo Dorantes,Ingeniero Civil,64
+615,William Hernan Zaldivar Rufino,Arquitecto,65
+616,William Isaias Arceo Rosado,Contador Publico,80
+617,William Jesus Contreras Chacon,Especializacion en Medicina del Deporte,98
+618,Wilma Guadalupe Blanco Euan,Quimico Farmaceutico Biologo,81
+619,Xiomara del Carmen Herrera Simon,Ingeniero Civil,88
+620,Yamile Irene Pinzon Cortes,Licenciado en Derecho,87
+621,Yamile Perez Padilla,Ingeniero Quimico Industrial,76
+622,Yanine Antonia de Padua Caballero Balam,Contador Publico,82
+623,Yazmin del Carmen Esquivel Oviedo,Contador Publico,82
+624,Yheny Lopez Garcia,Contador Publico,61
+625,Yolanda Mota Sanmiguel,Licenciado en Derecho,88
+626,Zury Vanessa Vazquez Aguilar,Contador Publico,80
