@@ -2,51 +2,67 @@ package arbolb;
 
 import java.io.Serializable;
 
-public class Graduado implements Serializable {
+@SuppressWarnings("unused")
+public class Graduado implements Serializable, Comparable<Graduado> {
     private int indice;
     private String nombre;
-    private String promedio;
     private String profesion;
+    private int promedio;
 
-    public  Graduado(int indice,String nombre, String profesion, String promedio){
-        this.nombre = nombre;
-        this.promedio = promedio;
-        this.profesion = profesion;
+    public Graduado(int indice, String nombre, String profesion, int promedio) {
         this.indice = indice;
-    }
-
-    public void setNombre(String nombre){
         this.nombre = nombre;
-    }
-    //------------------------------
-    public String getPromedio(){
-        return promedio;
-    }
-
-    public void setPromedio(String promedio){
+        this.profesion = profesion;
         this.promedio = promedio;
     }
-    //-------------------------------
-    public String getProfesion(){
-        return profesion;
-    }
 
-    public void setProfesion(String profesion){
-        this.profesion = profesion;
-    }
-
-    //-------------------------------
-    public int getIndice(){
+    public int getIndice() {
         return indice;
     }
 
-    public void setIndice(int indice){
+    public void setIndice(int indice) {
         this.indice = indice;
     }
 
-    //-------------------------------
-    public String toString(){
-        return "Alumnos: "+this.nombre+" Profesion: "+this.profesion+" Con promedio: "+this.promedio;
+    public String getNombre() {
+        return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public int getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(int promedio) {
+        this.promedio = promedio;
+    }
+
+    public String toString(){
+        return "Alumnos: " + nombre + " Profesion: " + profesion + " Con promedio: " + promedio;
+    }
+
+    public static Graduado parseGraduado(String[] data) {
+        return new Graduado(
+                Integer.parseInt( data[0] ),
+                data[1],
+                data[2],
+                Integer.parseInt( data[3] )
+        );
+    }
+
+    @Override
+    public int compareTo(Graduado o) {
+        return indice - o.indice;
+    }
 }

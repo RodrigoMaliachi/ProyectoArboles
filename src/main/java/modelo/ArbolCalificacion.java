@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArbolCalificacion {
-    private DepositoArchivos<String, ArrayList<Integer>> cal;
+    private DepositoArchivos<Integer, ArrayList<Integer>> cal;
 
     public ArbolCalificacion(){
         try {
@@ -21,15 +21,15 @@ public class ArbolCalificacion {
 
     public void crearArbol(ArrayList<Graduado> listaa) throws SerializadorException, ArbolException {
         for (Graduado graduado : listaa) {
-            String cadena = graduado.getPromedio();
+            int cadena = graduado.getPromedio();
             if(cal.exists(cadena)){
                 int aux2 = graduado.getIndice(); // El inidice que se agregará
                 ArrayList<Integer> aux3 = new ArrayList<>();  // La lista actualizada
-                aux3 = (ArrayList<Integer>) cal.get(graduado.getPromedio()).clone();
+                aux3 = cal.get(graduado.getPromedio());
                 aux3.add(aux2);   //Se agrega el nuevo indice
                cal.modificar(cadena,aux3);   //Se actualizan los datos
             }else{
-              String p = graduado.getPromedio();  //La clave del arbol
+              int p = graduado.getPromedio();  //La clave del arbol
                 ArrayList<Integer> pp = new ArrayList<>();  //Se crea el arreglo que guardará el primer elemento
                 pp.add(graduado.getIndice());   //Se agrega el primer indice
                 cal.agregar(graduado.getPromedio(),pp);  // Se agrega la información al arbol
