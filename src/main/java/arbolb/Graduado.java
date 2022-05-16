@@ -2,7 +2,8 @@ package arbolb;
 
 import java.io.Serializable;
 
-public class Graduado implements Serializable {
+@SuppressWarnings("unused")
+public class Graduado implements Serializable, Comparable<Graduado> {
     private int indice;
     private String nombre;
     private String profesion;
@@ -58,5 +59,10 @@ public class Graduado implements Serializable {
                 data[2],
                 Integer.parseInt( data[3] )
         );
+    }
+
+    @Override
+    public int compareTo(Graduado o) {
+        return indice - o.indice;
     }
 }
