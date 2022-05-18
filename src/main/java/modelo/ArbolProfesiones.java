@@ -24,6 +24,7 @@ public class ArbolProfesiones {
             String cadena = graduado.getProfesion();
 
             if(profesion.exists(cadena)){
+
                 int aux2 = graduado.getIndice(); // El inidice que se agregará
                 ArrayList<Integer> aux3 = new ArrayList<>();  // La lista actualizada
                 aux3 = profesion.get(graduado.getProfesion());

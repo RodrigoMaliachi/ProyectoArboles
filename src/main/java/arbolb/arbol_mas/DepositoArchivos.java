@@ -85,7 +85,6 @@ public class DepositoArchivos<Clave extends Comparable<Clave>,Clase> {
             return null;
         }
     }
-    
     public List<Clase> listar() throws SerializadorException{
         List<Elemento> listaPosicion = this.arbol.listar();
         if(listaPosicion == null){
