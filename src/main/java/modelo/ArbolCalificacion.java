@@ -13,7 +13,7 @@ public class ArbolCalificacion {
 
     public ArbolCalificacion(){
         try {
-            cal =new DepositoArchivos("src/","caliiones",1000);
+            cal =new DepositoArchivos("src/","calificacion",1000);
         } catch (ArbolException e) {
             throw new RuntimeException(e);
         }
