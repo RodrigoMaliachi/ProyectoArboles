@@ -1,7 +1,8 @@
 package com.proyectoarboles.proyectoarboles;
 
 public class Main {
+    //ESTA SE DEBE EJECUTAR
     public static void main(String[] args) {
-        ClasePrincipal.main(args);
+        ArbolAplication.main(args);
     }
 }

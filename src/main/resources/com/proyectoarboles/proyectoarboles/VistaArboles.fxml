@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="546.0" maxWidth="668.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectoarboles.proyectoarboles.ControladorVistaArboles">
+<BorderPane maxHeight="546.0" maxWidth="668.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyectoarboles.proyectoarboles.ControladorVistaArboles">
    <top>
       <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -65,6 +64,7 @@
                     <columns>
                       <TableColumn prefWidth="75.0" text="C1" />
                       <TableColumn prefWidth="75.0" text="C2" />
+                        <TableColumn prefWidth="304.0" text="Nombre" />
                     </columns>
                   </TableView>
                </children>

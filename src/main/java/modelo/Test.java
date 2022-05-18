@@ -4,7 +4,7 @@ import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.SerializadorException;
 
 import java.io.File;
-
+// ESTA CLASE SOLO ES DE PRUEBAS
 public class Test {
     public static void main(String[] args) throws ArbolException, SerializadorException {
 
