@@ -25,7 +25,7 @@ public class Test {
         //arbolProfesiones.listar();
     }
 
-    private static boolean fileExists(String nombreArchivo ){
+    public static boolean fileExists(String nombreArchivo ){
         File arb = new File("src/", nombreArchivo+".arb");
         File dat = new File("src/", nombreArchivo+".dat");
 

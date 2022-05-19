@@ -1,10 +1,13 @@
 package com.proyectoarboles.proyectoarboles;
 
-import arbolb.Graduado;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import modelo.Archivo;
+import modelo.Graduado;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,15 +17,18 @@ public class ControladorVistaArboles implements Initializable{
     @FXML private CheckBox checkboxNombre;
     @FXML private CheckBox checkboxProf;
     @FXML private CheckBox checkboxCal;
-    @FXML private TableView<Graduado> tablaEgresados;
-    @FXML private TableColumn<Graduado,String> columnaNombre;
-    @FXML private TableColumn<Graduado,String> columnaProf;
-    @FXML private TableColumn<Graduado,String> columnaCal;
-    ObservableList<Graduado> egresados;
+    @FXML private TableView<Graduado2> tablaEgresados;
+    @FXML private TableColumn<Graduado2,String> columnaNombre;
+    @FXML private TableColumn<Graduado2,String> columnaProf;
+    @FXML private TableColumn<Graduado2,Integer> columnaCal;
     @FXML ComboBox<String> comboNombre;
     @FXML ComboBox<String> comboProf;
     @FXML ComboBox<String> comboCal;
     @FXML Button botonBuscar;
+
+    // Para actualizar datos de la tabla
+    private ObservableList<Graduado2> egresados;
+
 
     @FXML
     public void filtrarPorNombre(){
@@ -59,12 +65,20 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void buscar(){
-
+        //columnaCal.setSortable(true);
+        //columnaCal.setSortType(TableColumn.SortType.DESCENDING);
     }
 
     private void initializeTable(){
+        columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        columnaProf.setCellValueFactory(new PropertyValueFactory<>("profesion"));
+        columnaCal.setCellValueFactory(new PropertyValueFactory<>("promedio"));
 
+        egresados = FXCollections.observableArrayList();
+        tablaEgresados.setItems(egresados);
     }
+
+
 
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
@@ -90,5 +104,16 @@ public class ControladorVistaArboles implements Initializable{
         initializeComboboxNombres();
         initializeComboboxProfesiones();
         initializeComboboxCalificaciones();
+        imprimirDatosTable();
+    }
+
+    public void imprimirDatosTable(){
+        egresados.clear();
+        ArrayList<Graduado> alumnos = new ArrayList<>();
+        alumnos = Archivo.leerArchivoCSV();
+
+        for (Graduado graduado : alumnos) {
+            egresados.add(new Graduado2(graduado.getNombre(),graduado.getProfesion(),graduado.getPromedio()));
+        }
     }
 }
