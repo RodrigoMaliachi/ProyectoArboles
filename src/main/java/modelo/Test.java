@@ -1,31 +1,38 @@
 package modelo;
 
-import arbolb.arbol_mas.DepositoArchivos;
+import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.SerializadorException;
 import java.io.File;
-import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) throws SerializadorException {
 
-        DepositoArchivos<String, ArrayList<Integer>> arbolNombres;
+        ArbolNombres arbolNombres;
 
-        if ( fileExists() ) {
-            arbolNombres = ArbolNombres.getNombresTree();
-        } else {
-            arbolNombres = ArbolNombres.crearArbol(Archivo.leerArchivoCSV());
-        }
+        arbolNombres = createTree();
 
-        arbolNombres.listar();
+        if ( arbolNombres != null )
+            arbolNombres.listar();
     }
 
-    private static boolean fileExists(){
+    private static ArbolNombres createTree() {
+        try {
+            return doesFilesTreesExists() ? new ArbolNombres() : new ArbolNombres( Archivo.leerArchivoCSV() );
+        } catch (ArbolException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static boolean doesFilesTreesExists(){
         File arb = new File("src/", "nombres.arb");
         File dat = new File("src/", "nombres.dat");
 
         if ( !arb.exists() || !dat.exists() ) {
-            arb.delete();
-            dat.delete();
+            if ( arb.exists() )
+                arb.delete();
+            if ( dat.exists() )
+                dat.delete();
             return false;
         }
         return true;

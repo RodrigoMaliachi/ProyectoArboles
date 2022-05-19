@@ -1,60 +1,42 @@
 package modelo;
 
-import arbolb.Graduado;
 import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.DepositoArchivos;
+import arbolb.Graduado;
 import arbolb.arbol_mas.SerializadorException;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArbolNombres {
+    private final DepositoArchivos<String, Integer> nombres;
 
-    private static final String SRC_PATH = "src/";
-    private static final String TREE_NAME = "nombres";
-    private static final DepositoArchivos<String, ArrayList<Integer>> nombresTree;
-
-    static{
-        try {
-            nombresTree = new DepositoArchivos<>(SRC_PATH, TREE_NAME, 1000);
-        } catch (ArbolException e) {
-            throw new RuntimeException(e);
-        }
+    public ArbolNombres() throws ArbolException {
+        nombres = new DepositoArchivos<>("src/","nombres",100000);
     }
 
-    public static DepositoArchivos<String, ArrayList<Integer>> crearArbol(ArrayList<Graduado> alumnos) {
-        alumnos.forEach(ArbolNombres::addNameToTree);
-        return nombresTree;
+    public ArbolNombres(ArrayList<Graduado> lista) throws ArbolException {
+        this();
+        crearArbol(lista);
     }
 
-    private static void addNameToTree(Graduado graduado){
-        String name = graduado.getNombre();
+    private void crearArbol(ArrayList<Graduado> lista) {
+        lista.forEach(this::agregarNombre);
+    }
 
-        ArrayList<Integer> indices;
-
+    private void agregarNombre(Graduado g) {
         try {
-            if ( nombresTree.exists( name ) ) {
-                indices = nombresTree.get( name );
-                indices.add( graduado.getIndice() );
-
-                nombresTree.modificar(
-                        name,
-                        indices
-                );
-            } else {
-                indices = new ArrayList<>();
-                indices.add( graduado.getIndice() );
-
-                nombresTree.agregar(
-                        name,
-                        indices
-                );
-            }
-        } catch (SerializadorException | ArbolException e) {
+            nombres.agregar(g.getNombre(), g.getIndice());
+        } catch (ArbolException | SerializadorException e) {
             e.printStackTrace();
         }
     }
 
-    public static DepositoArchivos<String, ArrayList<Integer>> getNombresTree(){
-        return nombresTree;
+    private DepositoArchivos<String, Integer> getNombres() {
+        return nombres;
+    }
+
+    public void listar() throws SerializadorException {
+        List<Integer> lista = nombres.listar();
+        lista.forEach(System.out::println);
     }
 }
