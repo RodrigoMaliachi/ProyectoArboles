@@ -1,13 +1,18 @@
 package com.proyectoarboles.proyectoarboles;
 
 import arbolb.Graduado;
+import arbolb.arbol_mas.ArbolException;
+import arbolb.arbol_mas.SerializadorException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import modelo.ArbolCalificacion;
+import modelo.ArbolProfesiones;
 import modelo.Archivo;
+import modelo.Test;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,13 +29,15 @@ public class ControladorVistaArboles implements Initializable{
     @FXML private TableColumn<Graduado2,Integer> columnaCal;
     @FXML ComboBox<String> comboNombre;
     @FXML ComboBox<String> comboProf;
-    @FXML ComboBox<String> comboCal;
+    @FXML ComboBox<Integer> comboCal;
     @FXML Button botonBuscar;
 
     // Para actualizar datos de la tabla
     private ObservableList<Graduado2> egresados;
 
     private ArrayList<Graduado2> egresadosDefault = new ArrayList<>();
+    private ArbolCalificacion calificaciones = new ArbolCalificacion();
+    private ArbolProfesiones profesiones = new ArbolProfesiones();
 
 
     @FXML
@@ -86,23 +93,52 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void seleccionNombre() {
-
+        comboNombre.getSelectionModel().getSelectedItem();
+        //nombres
     }
 
     @FXML
     public void seleccionProfesion(){
-
+        try {
+            System.out.println(profesiones.buscar(comboProf.getSelectionModel().getSelectedItem()));
+        } catch (SerializadorException e) {
+            System.out.println("ERROR: "+e.getMessage());
+        }
     }
 
     @FXML
     public void seleccionCalificacion(){
-
+        try {
+            System.out.println(calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem()));
+        } catch (SerializadorException e) {
+            System.out.println("ERROR: "+e.getMessage());
+        }
     }
 
     @FXML
-    public void buscar(){
-        //columnaCal.setSortable(true);
-        //columnaCal.setSortType(TableColumn.SortType.DESCENDING);
+    public void buscar() {
+
+    }
+
+    private void initializeTrees(){
+        if(!Test.fileExists("profesiones")){
+            try {
+                profesiones.crearArbol(Archivo.leerArchivoCSV());
+            } catch (SerializadorException e) {
+                e.printStackTrace();
+            } catch (ArbolException e) {
+                e.printStackTrace();
+            }
+        }
+        if(!Test.fileExists("calificacion")){
+            try {
+                calificaciones.crearArbol(Archivo.leerArchivoCSV());
+            } catch (SerializadorException e) {
+                e.printStackTrace();
+            } catch (ArbolException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void initializeTable(){
@@ -125,18 +161,18 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxProfesiones(){
         ArrayList<String> listaN = new ArrayList<>();
-        listaN.add("Andrea"); listaN.add("Alma"); listaN.add("Jonatan"); listaN.add("Rodrigo");
-        comboProf.getItems().addAll(listaN);
+
     }
 
     private void initializeComboboxCalificaciones(){
-        ArrayList<String> listaN = new ArrayList<>();
-        listaN.add("Andrea"); listaN.add("Alma"); listaN.add("Jonatan"); listaN.add("Rodrigo");
+        ArrayList<Integer> listaN = new ArrayList<>();
+        listaN.add(90);
         comboCal.getItems().addAll(listaN);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        initializeTrees();
         initializeTable();
         initializeComboboxNombres();
         initializeComboboxProfesiones();

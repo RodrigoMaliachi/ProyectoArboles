@@ -29,12 +29,16 @@ public class ArbolCalificacion {
                 aux3.add(aux2);   //Se agrega el nuevo indice
                cal.modificar(cadena,aux3);   //Se actualizan los datos
             }else{
-              int p = graduado.getPromedio();  //La clave del arbol
+                int p = graduado.getPromedio();  //La clave del arbol
                 ArrayList<Integer> pp = new ArrayList<>();  //Se crea el arreglo que guardará el primer elemento
                 pp.add(graduado.getIndice());   //Se agrega el primer indice
                 cal.agregar(graduado.getPromedio(),pp);  // Se agrega la información al arbol
             }
         }
+    }
+
+    public ArrayList<Integer> buscar(int calificacion) throws SerializadorException {
+        return cal.get(calificacion);
     }
 
     public void listar() throws SerializadorException {

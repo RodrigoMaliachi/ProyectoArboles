@@ -40,6 +40,10 @@ public class ArbolProfesiones {
         }
     }
 
+    public ArrayList<Integer> buscar(String prof) throws SerializadorException {
+        return profesion.get(prof);
+    }
+
     public void listar() throws SerializadorException {
         List<ArrayList<Integer>> lista = profesion.listar();
         System.out.println("\nLista");
