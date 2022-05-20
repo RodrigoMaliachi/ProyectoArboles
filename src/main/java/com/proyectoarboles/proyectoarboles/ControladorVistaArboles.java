@@ -35,9 +35,13 @@ public class ControladorVistaArboles implements Initializable{
     // Para actualizar datos de la tabla
     private ObservableList<Graduado2> egresados;
 
+    private ArrayList<Graduado> egresadosCompleto= new ArrayList<>();
     private ArrayList<Graduado2> egresadosDefault = new ArrayList<>();
     private ArbolCalificacion calificaciones = new ArbolCalificacion();
     private ArbolProfesiones profesiones = new ArbolProfesiones();
+
+    private ArrayList<Integer> lista1=new ArrayList<>();
+    private ArrayList<Integer> lista2=new ArrayList<>();
 
 
     @FXML
@@ -100,7 +104,11 @@ public class ControladorVistaArboles implements Initializable{
     @FXML
     public void seleccionProfesion(){
         try {
-            System.out.println(profesiones.buscar(comboProf.getSelectionModel().getSelectedItem()));
+            if(lista1.isEmpty()){
+                lista1=profesiones.buscar(comboProf.getSelectionModel().getSelectedItem());
+            }else {
+                lista2 = profesiones.buscar(comboProf.getSelectionModel().getSelectedItem());
+            }
         } catch (SerializadorException e) {
             System.out.println("ERROR: "+e.getMessage());
         }
@@ -109,7 +117,12 @@ public class ControladorVistaArboles implements Initializable{
     @FXML
     public void seleccionCalificacion(){
         try {
-            System.out.println(calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem()));
+            if(lista1.isEmpty()){
+                lista1=calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem());
+            }else{
+                lista2=calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem());
+            }
+
         } catch (SerializadorException e) {
             System.out.println("ERROR: "+e.getMessage());
         }
@@ -117,13 +130,44 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void buscar() {
+        if(!lista1.isEmpty()) {
+            ArrayList<Graduado> busqueda = new ArrayList<>();
+            if (lista2.isEmpty()) {
+                for (Integer i : lista1) {
+                    busqueda.add(egresadosCompleto.get(lista1.get(i)));
+                }
+            } else {
+                for(int i=0;i< lista1.size();i++){
+                    for(int j=0;j< lista2.size();j++){
+                        if(lista1.get(i).equals(lista2.get(j))){
+                            busqueda.add(egresadosCompleto.get(lista1.get(i)));
+                        }
+                    }
+                }
+
+                mostrarBusqueda(busqueda);
+                lista1.clear();
+                lista2.clear();
+            }
+        }
+    }
+
+    private void mostrarBusqueda(ArrayList<Graduado> busqueda){
+        egresados.clear();
+        int i=0;
+        for(Graduado2 graduado:egresadosDefault){
+            if(graduado.getNombre().equals(busqueda.get(i).getNombre())){
+                egresados.add(graduado);
+            }
+        }
 
     }
 
     private void initializeTrees(){
+        egresadosCompleto=Archivo.leerArchivoCSV();
         if(!Test.fileExists("profesiones")){
             try {
-                profesiones.crearArbol(Archivo.leerArchivoCSV());
+                profesiones.crearArbol(egresadosCompleto);
             } catch (SerializadorException e) {
                 e.printStackTrace();
             } catch (ArbolException e) {
@@ -132,7 +176,7 @@ public class ControladorVistaArboles implements Initializable{
         }
         if(!Test.fileExists("calificacion")){
             try {
-                calificaciones.crearArbol(Archivo.leerArchivoCSV());
+                calificaciones.crearArbol(egresadosCompleto);
             } catch (SerializadorException e) {
                 e.printStackTrace();
             } catch (ArbolException e) {
@@ -148,25 +192,38 @@ public class ControladorVistaArboles implements Initializable{
 
         egresados = FXCollections.observableArrayList();
         tablaEgresados.setItems(egresados);
-        imprimirDatosTable();
+        imprimirDatosTable(egresadosCompleto);
     }
 
 
 
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
-        listaN.add("Andrea"); listaN.add("Alma"); listaN.add("Jonatan"); listaN.add("Rodrigo"); listaN.add("");
+        for(Graduado2 graduado:egresadosDefault){
+            if(!listaN.contains(graduado.getProfesion())) {
+                listaN.add(graduado.getNombre());
+            }
+        }
         comboNombre.getItems().addAll(listaN);
     }
 
     private void initializeComboboxProfesiones(){
         ArrayList<String> listaN = new ArrayList<>();
-
+        for(Graduado2 graduado:egresadosDefault){
+            if(!listaN.contains(graduado.getProfesion())) {
+                listaN.add(graduado.getProfesion());
+            }
+        }
+        comboProf.getItems().addAll(listaN);
     }
 
     private void initializeComboboxCalificaciones(){
         ArrayList<Integer> listaN = new ArrayList<>();
-        listaN.add(90);
+        for(Graduado2 graduado:egresadosDefault){
+            if(!listaN.contains(graduado.getPromedio())) {
+                listaN.add(graduado.getPromedio());
+            }
+        }
         comboCal.getItems().addAll(listaN);
     }
 
@@ -179,10 +236,8 @@ public class ControladorVistaArboles implements Initializable{
         initializeComboboxCalificaciones();
     }
 
-    private void imprimirDatosTable(){
+    private void imprimirDatosTable(ArrayList<Graduado> alumnos){
         egresados.clear();
-        ArrayList<Graduado> alumnos = new ArrayList<>();
-        alumnos = Archivo.leerArchivoCSV();
 
         for (Graduado graduado : alumnos) {
             egresados.add(new Graduado2(graduado.getNombre(),graduado.getProfesion(),graduado.getPromedio()));

@@ -1,5 +1,7 @@
 package arbolb;
 
+import com.proyectoarboles.proyectoarboles.Graduado2;
+
 import java.io.Serializable;
 
 @SuppressWarnings("unused")
