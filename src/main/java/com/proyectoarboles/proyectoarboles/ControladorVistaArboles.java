@@ -11,6 +11,7 @@ import modelo.Archivo;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 
 public class ControladorVistaArboles implements Initializable{
@@ -29,23 +30,58 @@ public class ControladorVistaArboles implements Initializable{
     // Para actualizar datos de la tabla
     private ObservableList<Graduado2> egresados;
 
+    private ArrayList<Graduado2> egresadosDefault = new ArrayList<>();
+
 
     @FXML
     public void filtrarPorNombre(){
-        checkboxProf.setSelected(false);
-        checkboxCal.setSelected(false);
+        if(checkboxNombre.isSelected()){
+            checkboxProf.setSelected(false);
+            checkboxCal.setSelected(false);
+            egresados.sort(new Comparator<Graduado2>() {
+                @Override
+                public int compare(Graduado2 o1, Graduado2 o2) {
+                    return o1.getNombre().compareTo(o2.getNombre());
+                }
+            });
+        }else{
+            egresados.clear();
+            egresados.addAll(egresadosDefault);
+        }
     }
 
     @FXML
     public void filtrarPorProfesion(){
-        checkboxNombre.setSelected(false);
-        checkboxCal.setSelected(false);
+        if(checkboxProf.isSelected()){
+            checkboxNombre.setSelected(false);
+            checkboxCal.setSelected(false);
+            egresados.sort(new Comparator<Graduado2>() {
+                @Override
+                public int compare(Graduado2 o1, Graduado2 o2) {
+                    return o1.getProfesion().compareTo(o2.getProfesion());
+                }
+            });
+        }else{
+            egresados.clear();
+            egresados.addAll(egresadosDefault);
+        }
     }
 
     @FXML
     public void filtrarPorCalificacion(){
-        checkboxProf.setSelected(false);
-        checkboxNombre.setSelected(false);
+        if(checkboxCal.isSelected()){
+            checkboxNombre.setSelected(false);
+            checkboxProf.setSelected(false);
+            egresados.sort(new Comparator<Graduado2>() {
+                @Override
+                public int compare(Graduado2 o1, Graduado2 o2) {
+                    return o1.getPromedio()-o2.getPromedio();
+                }
+            });
+        }else{
+            egresados.clear();
+            egresados.addAll(egresadosDefault);
+        }
     }
 
     @FXML
@@ -76,6 +112,7 @@ public class ControladorVistaArboles implements Initializable{
 
         egresados = FXCollections.observableArrayList();
         tablaEgresados.setItems(egresados);
+        imprimirDatosTable();
     }
 
 
@@ -104,16 +141,23 @@ public class ControladorVistaArboles implements Initializable{
         initializeComboboxNombres();
         initializeComboboxProfesiones();
         initializeComboboxCalificaciones();
-        imprimirDatosTable();
     }
 
-    public void imprimirDatosTable(){
+    private void imprimirDatosTable(){
         egresados.clear();
         ArrayList<Graduado> alumnos = new ArrayList<>();
         alumnos = Archivo.leerArchivoCSV();
 
         for (Graduado graduado : alumnos) {
             egresados.add(new Graduado2(graduado.getNombre(),graduado.getProfesion(),graduado.getPromedio()));
+        }
+
+        llenarDefault(egresados);
+    }
+
+    private void llenarDefault(ObservableList<Graduado2> egresados){
+        for(Graduado2 graduado : egresados){
+            egresadosDefault.add(graduado);
         }
     }
 }

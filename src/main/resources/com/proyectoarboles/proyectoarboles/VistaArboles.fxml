@@ -63,9 +63,9 @@
                <children>
                   <TableView fx:id="tablaEgresados" prefHeight="369.0" prefWidth="455.0" VBox.vgrow="ALWAYS">
                     <columns>
-                       <TableColumn fx:id="columnaNombre" prefWidth="152.0" resizable="false" text="Nombre" />
-                       <TableColumn fx:id="columnaProf" prefWidth="160.800048828125" resizable="false" text="Profesión" />
-                       <TableColumn fx:id="columnaCal" prefWidth="144.0" resizable="false" text="Calificación" />
+                       <TableColumn fx:id="columnaNombre" prefWidth="181.0" resizable="false" text="Nombre" />
+                       <TableColumn fx:id="columnaProf" prefWidth="181.0" resizable="false" text="Profesión" />
+                       <TableColumn fx:id="columnaCal" prefWidth="93.0" resizable="false" text="Calificación" />
                     </columns>
                   </TableView>
                </children>
