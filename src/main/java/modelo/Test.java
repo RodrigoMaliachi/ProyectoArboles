@@ -1,40 +1,26 @@
 package modelo;
 
-import arbolb.arbol_mas.ArbolException;
-import arbolb.arbol_mas.SerializadorException;
 import java.io.File;
 
 public class Test {
-    public static void main(String[] args) throws SerializadorException {
+    public static void main(String[] args) {
 
         ArbolNombres arbolNombres;
 
         arbolNombres = createTree();
 
-        if ( arbolNombres != null )
-            arbolNombres.listar();
+        if ( arbolNombres != null ) {
+            System.out.println(arbolNombres);
+
+            System.out.println( arbolNombres.busca("Jonatan Gonzalez Ahumada").indice );
+        }
     }
 
     private static ArbolNombres createTree() {
-        try {
-            return doesFilesTreesExists() ? new ArbolNombres() : new ArbolNombres( Archivo.leerArchivoCSV() );
-        } catch (ArbolException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return doesFilesTreesExists() ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
     }
 
     private static boolean doesFilesTreesExists(){
-        File arb = new File("src/", "nombres.arb");
-        File dat = new File("src/", "nombres.dat");
-
-        if ( !arb.exists() || !dat.exists() ) {
-            if ( arb.exists() )
-                arb.delete();
-            if ( dat.exists() )
-                dat.delete();
-            return false;
-        }
-        return true;
+        return new File("src/", "nombres.arb").exists();
     }
 }

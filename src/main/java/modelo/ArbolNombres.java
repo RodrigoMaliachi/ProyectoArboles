@@ -1,42 +1,51 @@
 package modelo;
 
-import arbolb.arbol_mas.ArbolException;
-import arbolb.arbol_mas.DepositoArchivos;
 import arbolb.Graduado;
-import arbolb.arbol_mas.SerializadorException;
-import java.util.ArrayList;
-import java.util.List;
+import ArbolAVL.ArbolAVL;
+import ArbolAVL.VerticeArbolBinario;
+import java.util.Collection;
 
-public class ArbolNombres {
-    private final DepositoArchivos<String, Integer> nombres;
+public class ArbolNombres extends ArbolAVL<String> {
 
-    public ArbolNombres() throws ArbolException {
-        nombres = new DepositoArchivos<>("src/","nombres",100000);
-    }
+    protected class VerticeNombre extends VerticeAVL {
 
-    public ArbolNombres(ArrayList<Graduado> lista) throws ArbolException {
-        this();
-        crearArbol(lista);
-    }
+        public int indice;
 
-    private void crearArbol(ArrayList<Graduado> lista) {
-        lista.forEach(this::agregarNombre);
-    }
-
-    private void agregarNombre(Graduado g) {
-        try {
-            nombres.agregar(g.getNombre(), g.getIndice());
-        } catch (ArbolException | SerializadorException e) {
-            e.printStackTrace();
+        /**
+         * Constructor único que recibe un elemento.
+         *
+         * @param elemento el elemento del vértice.
+         */
+        public VerticeNombre(String elemento) {
+            super(elemento);
         }
     }
 
-    private DepositoArchivos<String, Integer> getNombres() {
-        return nombres;
+    public ArbolNombres() {
+        super();
     }
 
-    public void listar() throws SerializadorException {
-        List<Integer> lista = nombres.listar();
-        lista.forEach(System.out::println);
+    public ArbolNombres(Collection<Graduado> collection) {
+        collection.forEach(this::agrega);
+        ArbolNombresSerializator.toBinaryFile(this);
+    }
+
+    @Override
+    protected Vertice nuevoVertice(String elemento) {
+        return new VerticeNombre(elemento);
+    }
+
+    public void agrega(Graduado g) {
+        agrega(g.getNombre());
+        verticeNombre( busca(g.getNombre()) ).indice = g.getIndice();
+    }
+
+    @Override
+    public VerticeNombre busca(String elemento) {
+        return verticeNombre( super.busca(elemento) );
+    }
+
+    private VerticeNombre verticeNombre(VerticeArbolBinario<String> vertice) {
+        return (VerticeNombre) vertice;
     }
 }
