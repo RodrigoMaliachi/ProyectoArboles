@@ -10,6 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import modelo.*;
+import modelo.ArbolCalificacion;
+import modelo.ArbolProfesiones;
+import modelo.Archivo;
+import modelo.Test;
 
 import java.io.File;
 import java.net.URL;
