@@ -8,4 +8,5 @@ module com.proyectoarboles.proyectoarboles {
 
     opens com.proyectoarboles.proyectoarboles to javafx.fxml;
     exports com.proyectoarboles.proyectoarboles;
+    exports arbolb;
 }

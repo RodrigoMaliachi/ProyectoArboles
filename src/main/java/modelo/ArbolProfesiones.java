@@ -4,7 +4,6 @@ import arbolb.Graduado;
 import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.DepositoArchivos;
 import arbolb.arbol_mas.SerializadorException;
-import com.proyectoarboles.proyectoarboles.Graduado2;
 
 import java.util.ArrayList;
 import java.util.List;

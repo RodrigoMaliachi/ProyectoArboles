@@ -1,53 +1,56 @@
 package arbolb;
 
-import com.proyectoarboles.proyectoarboles.Graduado2;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 import java.io.Serializable;
 
 @SuppressWarnings("unused")
 public class Graduado implements Serializable, Comparable<Graduado> {
-    private int indice;
-    private String nombre;
-    private String profesion;
-    private int promedio;
+    private final IntegerProperty indice = new SimpleIntegerProperty();
+    private final StringProperty nombre = new SimpleStringProperty();
+    private final StringProperty profesion = new SimpleStringProperty();
+    private final IntegerProperty promedio = new SimpleIntegerProperty();
 
     public Graduado(int indice, String nombre, String profesion, int promedio) {
-        this.indice = indice;
-        this.nombre = nombre;
-        this.profesion = profesion;
-        this.promedio = promedio;
+        this.indice.set(indice);
+        this.nombre.set(nombre);
+        this.profesion.set(profesion);
+        this.promedio.set(promedio);
     }
 
-    public int getIndice() {
+    public IntegerProperty indiceProperty() {
         return indice;
     }
 
-    public void setIndice(int indice) {
-        this.indice = indice;
-    }
-
-    public String getNombre() {
+    public StringProperty nombreProperty() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getProfesion() {
+    public StringProperty profesionProperty() {
         return profesion;
     }
 
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
-    }
-
-    public int getPromedio() {
+    public IntegerProperty promedioProperty() {
         return promedio;
     }
 
-    public void setPromedio(int promedio) {
-        this.promedio = promedio;
+    public int getIndice() {
+        return indice.get();
+    }
+
+    public String getNombre() {
+        return nombre.get();
+    }
+
+    public String getProfesion() {
+        return profesion.get();
+    }
+
+    public int getPromedio() {
+        return promedio.get();
     }
 
     public String toString(){
@@ -65,6 +68,6 @@ public class Graduado implements Serializable, Comparable<Graduado> {
 
     @Override
     public int compareTo(Graduado o) {
-        return indice - o.indice;
+        return indice.get() - o.indice.get();
     }
 }

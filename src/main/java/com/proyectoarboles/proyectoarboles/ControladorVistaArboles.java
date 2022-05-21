@@ -25,22 +25,22 @@ public class ControladorVistaArboles implements Initializable{
     @FXML private CheckBox checkboxNombre;
     @FXML private CheckBox checkboxProf;
     @FXML private CheckBox checkboxCal;
-    @FXML private TableView<Graduado2> tablaEgresados;
-    @FXML private TableColumn<Graduado2,String> columnaNombre;
-    @FXML private TableColumn<Graduado2,String> columnaProf;
-    @FXML private TableColumn<Graduado2,Integer> columnaCal;
+    @FXML private TableView<Graduado> tablaEgresados;
+    @FXML private TableColumn<Graduado,String> columnaNombre;
+    @FXML private TableColumn<Graduado,String> columnaProf;
+    @FXML private TableColumn<Graduado,Integer> columnaCal;
     @FXML ComboBox<String> comboNombre;
     @FXML ComboBox<String> comboProf;
     @FXML ComboBox<Integer> comboCal;
     @FXML Button botonBuscar;
 
     // Para actualizar datos de la tabla
-    private ObservableList<Graduado2> egresados;
+    private ObservableList<Graduado> egresados;
 
     private ArrayList<Graduado> egresadosCompleto= new ArrayList<>();
-    private ArrayList<Graduado2> egresadosDefault = new ArrayList<>();
-    private ArbolCalificacion calificaciones = new ArbolCalificacion();
-    private ArbolProfesiones profesiones = new ArbolProfesiones();
+    private final ArrayList<Graduado> egresadosDefault = new ArrayList<>();
+    private final ArbolCalificacion calificaciones = new ArbolCalificacion();
+    private final ArbolProfesiones profesiones = new ArbolProfesiones();
 
     private ArrayList<Integer> lista1=new ArrayList<>();
     private ArrayList<Integer> lista2=new ArrayList<>();
@@ -51,9 +51,9 @@ public class ControladorVistaArboles implements Initializable{
         if(checkboxNombre.isSelected()){
             checkboxProf.setSelected(false);
             checkboxCal.setSelected(false);
-            egresados.sort(new Comparator<Graduado2>() {
+            egresados.sort(new Comparator<Graduado>() {
                 @Override
-                public int compare(Graduado2 o1, Graduado2 o2) {
+                public int compare(Graduado o1, Graduado o2) {
                     return o1.getNombre().compareTo(o2.getNombre());
                 }
             });
@@ -68,9 +68,9 @@ public class ControladorVistaArboles implements Initializable{
         if(checkboxProf.isSelected()){
             checkboxNombre.setSelected(false);
             checkboxCal.setSelected(false);
-            egresados.sort(new Comparator<Graduado2>() {
+            egresados.sort(new Comparator<Graduado>() {
                 @Override
-                public int compare(Graduado2 o1, Graduado2 o2) {
+                public int compare(Graduado o1, Graduado o2) {
                     return o1.getProfesion().compareTo(o2.getProfesion());
                 }
             });
@@ -85,9 +85,9 @@ public class ControladorVistaArboles implements Initializable{
         if(checkboxCal.isSelected()){
             checkboxNombre.setSelected(false);
             checkboxProf.setSelected(false);
-            egresados.sort(new Comparator<Graduado2>() {
+            egresados.sort(new Comparator<Graduado>() {
                 @Override
-                public int compare(Graduado2 o1, Graduado2 o2) {
+                public int compare(Graduado o1, Graduado o2) {
                     return o1.getPromedio()-o2.getPromedio();
                 }
             });
@@ -172,18 +172,14 @@ public class ControladorVistaArboles implements Initializable{
         if(!Test.fileExists("profesiones")){
             try {
                 profesiones.crearArbol(egresadosCompleto);
-            } catch (SerializadorException e) {
-                e.printStackTrace();
-            } catch (ArbolException e) {
+            } catch (SerializadorException | ArbolException e) {
                 e.printStackTrace();
             }
         }
         if(!Test.fileExists("calificacion")){
             try {
                 calificaciones.crearArbol(egresadosCompleto);
-            } catch (SerializadorException e) {
-                e.printStackTrace();
-            } catch (ArbolException e) {
+            } catch (SerializadorException | ArbolException e) {
                 e.printStackTrace();
             }
         }
@@ -201,7 +197,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
-        for(Graduado2 graduado:egresadosDefault){
+        for(Graduado graduado:egresadosDefault){
             if(!listaN.contains(graduado.getProfesion())) {
                 listaN.add(graduado.getNombre());
             }
@@ -212,7 +208,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxProfesiones(){
         ArrayList<String> listaN = new ArrayList<>();
-        for(Graduado2 graduado:egresadosDefault){
+        for(Graduado graduado:egresadosDefault){
             if(!listaN.contains(graduado.getProfesion())) {
                 listaN.add(graduado.getProfesion());
             }
@@ -229,7 +225,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxCalificaciones(){
         ArrayList<Integer> listaN = new ArrayList<>();
-        for(Graduado2 graduado:egresadosDefault){
+        for(Graduado graduado:egresadosDefault){
             if(!listaN.contains(graduado.getPromedio())) {
                 listaN.add(graduado.getPromedio());
             }
@@ -255,18 +251,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void imprimirDatosTable(ArrayList<Graduado> alumnos){
         egresados.clear();
-
-        for (Graduado graduado : alumnos) {
-            egresados.add(new Graduado2(graduado.getNombre(),graduado.getProfesion(),graduado.getPromedio()));
-        }
-
-        llenarDefault(egresados);
-    }
-
-    private void llenarDefault(ObservableList<Graduado2> egresados){
-        for(Graduado2 graduado : egresados){
-            egresadosDefault.add(graduado);
-        }
+        egresados.addAll(alumnos);
     }
 
     private static ArbolNombres createTree() {
