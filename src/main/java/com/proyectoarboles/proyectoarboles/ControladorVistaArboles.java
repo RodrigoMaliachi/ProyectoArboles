@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import modelo.ArbolCalificacion;
 import modelo.ArbolProfesiones;
 import modelo.Archivo;
+import modelo.Test;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -129,20 +130,19 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void buscar() {
-        if(!lista1.isEmpty()) {
-            ArrayList<Graduado> busqueda = new ArrayList<>();
+        if (!lista1.isEmpty()) {
+            ArrayList<Integer> busqueda = new ArrayList<>();
             if (lista2.isEmpty()) {
                 for (Integer i : lista1) {
-                    busqueda.add(egresadosCompleto.get(i-1));
-                    System.out.println("Aquí estoyyy"+ lista1);
+                    System.out.println("Aquí estoyyy" + lista1);
                 }
-                mostrarBusqueda(busqueda);
+                mostrarBusqueda(lista1);
                 lista1.clear();
             } else {
-                for(int i=0;i< lista1.size();i++){
-                    for(int j=0;j< lista2.size();j++){
-                        if(lista1.get(i).equals(lista2.get(j))){
-                            busqueda.add(egresadosCompleto.get(lista1.get(i)-1));
+                for (int i = 0; i < lista1.size(); i++) {
+                    for (int j = 0; j < lista2.size(); j++) {
+                        if (lista1.get(i).equals(lista2.get(j))) {
+                            busqueda.add(lista1.get(i));
                         }
                     }
                 }
@@ -154,19 +154,14 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
-    private void mostrarBusqueda(ArrayList<Graduado> busqueda){
+    private void mostrarBusqueda(ArrayList<Integer> busqueda){
         egresados.clear();
         int i=0;
         System.out.println("Legoo aqui");
-        System.out.println("Prbando aquí longituf");
-        for(Graduado j:busqueda){
-            for(Graduado2 graduado:egresadosDefault){
-                if(graduado.getNombre().equals(j.getNombre())){
-                    egresados.add(graduado);
-                }
-            }
+        System.out.println("Prbando aquí longituf"+busqueda);
+        for(int j = 0; j<busqueda.size();j++){
+            egresados.add(egresadosDefault.get(busqueda.get(j)-1));
         }
-
     }
 
     private void initializeTrees(){
