@@ -9,10 +9,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import modelo.ArbolCalificacion;
-import modelo.ArbolProfesiones;
-import modelo.Archivo;
+import modelo.*;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -266,5 +265,13 @@ public class ControladorVistaArboles implements Initializable{
         for(Graduado2 graduado : egresados){
             egresadosDefault.add(graduado);
         }
+    }
+
+    private static ArbolNombres createTree() {
+      return doesFilesTreesExists() ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
+    }
+
+    private static boolean doesFilesTreesExists(){
+        return new File("src/", "nombres.arb").exists();
     }
 }
