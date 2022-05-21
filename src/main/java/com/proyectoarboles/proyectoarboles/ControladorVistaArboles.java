@@ -12,7 +12,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import modelo.ArbolCalificacion;
 import modelo.ArbolProfesiones;
 import modelo.Archivo;
-import modelo.Test;
 
 import java.net.URL;
 import java.util.ArrayList;

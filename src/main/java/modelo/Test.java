@@ -38,29 +38,29 @@ public class Test {
     }
 }
 
-package modelo;
+//package modelo;
 
-import java.io.File;
+//import java.io.File;
 
-public class Test {
-    public static void main(String[] args) {
+//public class Test {
+//    public static void main(String[] args) {
 
-        ArbolNombres arbolNombres;
+        //ArbolNombres arbolNombres;
 
-        arbolNombres = createTree();
+        //arbolNombres = createTree();
 
-        if ( arbolNombres != null ) {
-            System.out.println(arbolNombres);
+        //if ( arbolNombres != null ) {
+          //  System.out.println(arbolNombres);
 
-            System.out.println( arbolNombres.busca("Jonatan Gonzalez Ahumada").indice );
-        }
-    }
+        //    System.out.println( arbolNombres.busca("Jonatan Gonzalez Ahumada").indice );
+      //  }
+    //}
 
-    private static ArbolNombres createTree() {
-        return doesFilesTreesExists() ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
-    }
+    //private static ArbolNombres createTree() {
+      //  return doesFilesTreesExists() ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
+    //}
 
-    private static boolean doesFilesTreesExists(){
-        return new File("src/", "nombres.arb").exists();
-    }
-}
+    //private static boolean doesFilesTreesExists(){
+    //    return new File("src/", "nombres.arb").exists();
+  //  }
+//}
