@@ -38,7 +38,7 @@ public class ControladorVistaArboles implements Initializable{
     private ObservableList<Graduado> egresados;
 
     private ArrayList<Graduado> egresadosCompleto= new ArrayList<>();
-    private final ArrayList<Graduado> egresadosDefault = new ArrayList<>();
+
     private final ArbolCalificacion calificaciones = new ArbolCalificacion();
     private final ArbolProfesiones profesiones = new ArbolProfesiones();
 
@@ -59,7 +59,7 @@ public class ControladorVistaArboles implements Initializable{
             });
         }else{
             egresados.clear();
-            egresados.addAll(egresadosDefault);
+            egresados.addAll(egresadosCompleto);
         }
     }
 
@@ -76,7 +76,7 @@ public class ControladorVistaArboles implements Initializable{
             });
         }else{
             egresados.clear();
-            egresados.addAll(egresadosDefault);
+            egresados.addAll(egresadosCompleto);
         }
     }
 
@@ -93,7 +93,7 @@ public class ControladorVistaArboles implements Initializable{
             });
         }else{
             egresados.clear();
-            egresados.addAll(egresadosDefault);
+            egresados.addAll(egresadosCompleto);
         }
     }
 
@@ -160,7 +160,7 @@ public class ControladorVistaArboles implements Initializable{
     private void mostrarBusqueda(ArrayList<Integer> busqueda){
         egresados.clear();
         for(int j = 0; j<busqueda.size();j++){
-            egresados.add(egresadosDefault.get(busqueda.get(j)-1));
+            egresados.add(egresadosCompleto.get(busqueda.get(j)-1));
         }
     }
 
@@ -194,7 +194,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
-        for(Graduado graduado:egresadosDefault){
+        for(Graduado graduado:egresadosCompleto){
             if(!listaN.contains(graduado.getProfesion())) {
                 listaN.add(graduado.getNombre());
             }
