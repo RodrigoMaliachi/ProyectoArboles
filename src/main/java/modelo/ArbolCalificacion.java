@@ -3,6 +3,7 @@ package modelo;
 import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.DepositoArchivos;
 import arbolb.Graduado;
+import arbolb.arbol_mas.Elemento;
 import arbolb.arbol_mas.SerializadorException;
 
 import java.util.ArrayList;
@@ -39,6 +40,10 @@ public class ArbolCalificacion {
 
     public ArrayList<Integer> buscar(int calificacion) throws SerializadorException {
         return cal.get(calificacion);
+    }
+
+    public List<Elemento> getIndices() throws SerializadorException{
+        return cal.indices();
     }
 
     public void listar() throws SerializadorException {
