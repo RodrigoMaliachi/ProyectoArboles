@@ -162,9 +162,6 @@ public class ControladorVistaArboles implements Initializable{
 
     private void mostrarBusqueda(ArrayList<Integer> busqueda){
         egresados.clear();
-        int i=0;
-        System.out.println("Legoo aqui");
-        System.out.println("Prbando aquí longituf"+busqueda);
         for(int j = 0; j<busqueda.size();j++){
             egresados.add(egresadosDefault.get(busqueda.get(j)-1));
         }
