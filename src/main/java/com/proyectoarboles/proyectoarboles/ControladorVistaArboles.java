@@ -133,10 +133,8 @@ public class ControladorVistaArboles implements Initializable{
         if(!lista1.isEmpty()) {
             ArrayList<Graduado> busqueda = new ArrayList<>();
             if (lista2.isEmpty()) {
-                int j = 0;
                 for (Integer i : lista1) {
-                    busqueda.add(egresadosCompleto.get(lista1.get(j)-1));
-                    j++;
+                    busqueda.add(egresadosCompleto.get(i-1));
                     System.out.println("Aquí estoyyy"+ lista1);
                 }
                 mostrarBusqueda(busqueda);
@@ -145,11 +143,11 @@ public class ControladorVistaArboles implements Initializable{
                 for(int i=0;i< lista1.size();i++){
                     for(int j=0;j< lista2.size();j++){
                         if(lista1.get(i).equals(lista2.get(j))){
-                            busqueda.add(egresadosCompleto.get(lista1.get(i)));
+                            busqueda.add(egresadosCompleto.get(lista1.get(i)-1));
                         }
                     }
                 }
-                System.out.println("Aquí estoy");
+                System.out.println(busqueda);
                 mostrarBusqueda(busqueda);
                 lista1.clear();
                 lista2.clear();
@@ -162,10 +160,11 @@ public class ControladorVistaArboles implements Initializable{
         int i=0;
         System.out.println("Legoo aqui");
         System.out.println("Prbando aquí longituf");
-        for(Graduado2 graduado:egresadosDefault){
-            if(graduado.getNombre().equals(busqueda.get(i).getNombre())&& i<busqueda.size()-1) {
-                egresados.add(graduado);
-                i++;
+        for(Graduado j:busqueda){
+            for(Graduado2 graduado:egresadosDefault){
+                if(graduado.getNombre().equals(j.getNombre())){
+                    egresados.add(graduado);
+                }
             }
         }
 
@@ -203,8 +202,6 @@ public class ControladorVistaArboles implements Initializable{
         imprimirDatosTable(egresadosCompleto);
     }
 
-
-
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
         for(Graduado2 graduado:egresadosDefault){
@@ -222,6 +219,12 @@ public class ControladorVistaArboles implements Initializable{
                 listaN.add(graduado.getProfesion());
             }
         }
+        listaN.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
         comboProf.getItems().addAll(listaN);
     }
 
@@ -232,6 +235,12 @@ public class ControladorVistaArboles implements Initializable{
                 listaN.add(graduado.getPromedio());
             }
         }
+        listaN.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-o2;
+            }
+        });
         comboCal.getItems().addAll(listaN);
     }
 
