@@ -3,6 +3,7 @@ package modelo;
 import arbolb.Graduado;
 import arbolb.arbol_mas.ArbolException;
 import arbolb.arbol_mas.DepositoArchivos;
+import arbolb.arbol_mas.Elemento;
 import arbolb.arbol_mas.SerializadorException;
 import com.proyectoarboles.proyectoarboles.Graduado2;
 
@@ -43,6 +44,10 @@ public class ArbolProfesiones {
 
     public ArrayList<Integer> buscar(String prof) throws SerializadorException {
         return profesion.get(prof);
+    }
+
+    public List<Elemento> getIndices() throws SerializadorException{
+        return profesion.indices();
     }
 
     public void listar() throws SerializadorException {

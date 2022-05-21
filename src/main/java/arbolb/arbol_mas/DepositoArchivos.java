@@ -96,6 +96,14 @@ public class DepositoArchivos<Clave extends Comparable<Clave>,Clase> {
         }
         return listaClase;
     }
+
+    public List<Elemento> indices() throws SerializadorException{
+        List<Elemento> listaPosicion = this.arbol.listar();
+        if(listaPosicion == null){
+            return null;
+        }
+        return listaPosicion;
+    }
     
     public Boolean eliminar(Clave clave) throws ArbolException, IOException, SerializadorException{
         // comprobamos la existencia de la clave en el arbol, el cual nos retorna

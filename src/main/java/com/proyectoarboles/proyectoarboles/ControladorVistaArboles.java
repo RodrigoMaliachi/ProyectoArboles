@@ -137,9 +137,6 @@ public class ControladorVistaArboles implements Initializable{
         if (!lista1.isEmpty()) {
             ArrayList<Integer> busqueda = new ArrayList<>();
             if (lista2.isEmpty()) {
-                for (Integer i : lista1) {
-                    System.out.println("Aquí estoyyy" + lista1);
-                }
                 mostrarBusqueda(lista1);
                 lista1.clear();
             } else {
@@ -210,36 +207,20 @@ public class ControladorVistaArboles implements Initializable{
         comboNombre.getItems().addAll(listaN);
     }
 
-    private void initializeComboboxProfesiones(){
+    private void initializeComboboxProfesiones() throws SerializadorException {
         ArrayList<String> listaN = new ArrayList<>();
-        for(Graduado2 graduado:egresadosDefault){
-            if(!listaN.contains(graduado.getProfesion())) {
-                listaN.add(graduado.getProfesion());
-            }
+        for(int i=0;i<profesiones.getIndices().size();i++){
+            listaN.add((String) profesiones.getIndices().get(i).getClave());
         }
-        listaN.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
         listaN.add("Profesion");
         comboProf.getItems().addAll(listaN);
     }
 
-    private void initializeComboboxCalificaciones(){
+    private void initializeComboboxCalificaciones() throws SerializadorException {
         ArrayList<Integer> listaN = new ArrayList<>();
-        for(Graduado2 graduado:egresadosDefault){
-            if(!listaN.contains(graduado.getPromedio())) {
-                listaN.add(graduado.getPromedio());
-            }
+        for(int i=0;i<calificaciones.getIndices().size();i++){
+            listaN.add((Integer) calificaciones.getIndices().get(i).getClave());
         }
-        listaN.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1-o2;
-            }
-        });
         listaN.add(0);
         comboCal.getItems().addAll(listaN);
     }
@@ -249,8 +230,16 @@ public class ControladorVistaArboles implements Initializable{
         initializeTrees();
         initializeTable();
         initializeComboboxNombres();
-        initializeComboboxProfesiones();
-        initializeComboboxCalificaciones();
+        try {
+            initializeComboboxProfesiones();
+        } catch (SerializadorException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            initializeComboboxCalificaciones();
+        } catch (SerializadorException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void imprimirDatosTable(ArrayList<Graduado> alumnos){
