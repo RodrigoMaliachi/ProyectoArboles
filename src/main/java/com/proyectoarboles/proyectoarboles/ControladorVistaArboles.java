@@ -14,6 +14,7 @@ import modelo.ArbolCalificacion;
 import modelo.ArbolProfesiones;
 import modelo.Archivo;
 import modelo.Test;
+import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.io.File;
 import java.net.URL;
@@ -31,7 +32,7 @@ public class ControladorVistaArboles implements Initializable{
     @FXML private TableColumn<Graduado,Integer> columnaCal;
     @FXML ComboBox<String> comboNombre;
     @FXML ComboBox<String> comboProf;
-    @FXML ComboBox<Integer> comboCal;
+    @FXML ComboBox<String> comboCal;
     @FXML Button botonBuscar;
 
     // Para actualizar datos de la tabla
@@ -99,14 +100,14 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void seleccionNombre() {
-        comboNombre.getSelectionModel().getSelectedItem();
+        comboNombre.getValue();
         //nombres
     }
 
     @FXML
     public void seleccionProfesion(){
         try {
-            if(comboProf.getSelectionModel().getSelectedItem()!="Profesion") {
+            if(!comboProf.getSelectionModel().getSelectedItem().equals("Profesion")) {
                 if (lista1.isEmpty()) {
                     lista1 = profesiones.buscar(comboProf.getSelectionModel().getSelectedItem());
                 } else {
@@ -121,40 +122,31 @@ public class ControladorVistaArboles implements Initializable{
     @FXML
     public void seleccionCalificacion(){
         try {
-            if(comboCal.getSelectionModel().getSelectedItem()!=0){
+            int opc=Integer.parseInt(comboCal.getValue());
                 if (lista1.isEmpty()) {
-                    lista1 = calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem());
+                    lista1 = calificaciones.buscar(opc);
                 } else {
-                    lista2 = calificaciones.buscar(comboCal.getSelectionModel().getSelectedItem());
+                    lista2 = calificaciones.buscar(opc);
                 }
-            }
-        } catch (SerializadorException e) {
+        } catch (NumberFormatException | SerializadorException e) {
             System.out.println("ERROR: "+e.getMessage());
         }
     }
 
     public void buscar() {
         if (!lista1.isEmpty()) {
-            ArrayList<Integer> busqueda = new ArrayList<>();
             if (lista2.isEmpty()) {
                 mostrarBusqueda(lista1);
                 lista1.clear();
             } else {
-                for (int i = 0; i < lista1.size(); i++) {
-                    for (int j = 0; j < lista2.size(); j++) {
-                        if (lista1.get(i).equals(lista2.get(j))) {
-                            busqueda.add(lista1.get(i));
-                        }
-                    }
-                }
-                System.out.println(busqueda);
-                mostrarBusqueda(busqueda);
+                lista1.retainAll(lista2);
+                mostrarBusqueda(lista1);
                 lista1.clear();
                 lista2.clear();
             }
         }
-        comboProf.getSelectionModel().selectLast();
-        comboCal.getSelectionModel().selectLast();
+        comboProf.getSelectionModel().selectFirst();
+        comboCal.getSelectionModel().selectFirst();
     }
 
     private void mostrarBusqueda(ArrayList<Integer> busqueda){
@@ -205,19 +197,19 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxProfesiones() throws SerializadorException {
         ArrayList<String> listaN = new ArrayList<>();
+        listaN.add("Profesion");
         for(int i=0;i<profesiones.getIndices().size();i++){
             listaN.add((String) profesiones.getIndices().get(i).getClave());
         }
-        listaN.add("Profesion");
         comboProf.getItems().addAll(listaN);
     }
 
     private void initializeComboboxCalificaciones() throws SerializadorException {
-        ArrayList<Integer> listaN = new ArrayList<>();
-        for(int i=0;i<calificaciones.getIndices().size();i++){
-            listaN.add((Integer) calificaciones.getIndices().get(i).getClave());
+        ArrayList<String> listaN = new ArrayList<>();
+        listaN.add("Calificacion");
+        for(int i=60;i<=100;i++){
+            listaN.add(String.valueOf(i));
         }
-        listaN.add(0);
         comboCal.getItems().addAll(listaN);
     }
 
