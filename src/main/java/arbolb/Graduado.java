@@ -7,8 +7,16 @@ import javafx.beans.property.StringProperty;
 
 import java.io.Serializable;
 
+/**
+ * Representa la informacion que se desea guardar en un formato de graduado
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 @SuppressWarnings("unused")
 public class Graduado implements Serializable, Comparable<Graduado> {
+    /**
+     * Representa la clave de busqueda
+     */
     private final IntegerProperty indice = new SimpleIntegerProperty();
     private final StringProperty nombre = new SimpleStringProperty();
     private final StringProperty profesion = new SimpleStringProperty();

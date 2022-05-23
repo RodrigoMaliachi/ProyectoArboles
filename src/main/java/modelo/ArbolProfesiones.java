@@ -8,10 +8,19 @@ import arbolb.arbol_mas.SerializadorException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * El objetivo es tener los metodos y atributos necesarios para crear el arbol de profesiones
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ArbolProfesiones {
     private DepositoArchivos<String, ArrayList<Integer>> profesion;
 
+    /**
+     * Constructor de la clase.
+     * Se crea un objecto de tipo "DepositoArchivo". Al constructor se le pasa el nombre de los archivos .dat y .arb
+     * Tambien se le pasa la separacion, representando el limite de datos almacenables en los archivos
+     */
     public ArbolProfesiones(){
         try {
             profesion =new DepositoArchivos("src/","profesiones",100000);
@@ -41,19 +50,21 @@ public class ArbolProfesiones {
         }
     }
 
+    /**
+     * Busca un elementos en el arbol dependiendo la clave
+     * @param prof es la clave, por ejemplo "Arquitecto"
+     * @return retorna la lista de indices guardados en la clave
+     */
     public ArrayList<Integer> buscar(String prof) throws SerializadorException {
         return profesion.get(prof);
     }
 
+    /**
+     * Regresa las profesiones que se guardaron
+     * @return lista de las profesiones guardadas
+     */
     public List<Elemento> getIndices() throws SerializadorException{
         return profesion.indices();
     }
 
-    public void listar() throws SerializadorException {
-        List<ArrayList<Integer>> lista = profesion.listar();
-        System.out.println("\nLista");
-        lista.stream().forEach((grad) -> {
-            System.out.println(grad);
-        });
-    }
 }

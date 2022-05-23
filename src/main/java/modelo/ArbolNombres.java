@@ -4,7 +4,11 @@ import arbolb.Graduado;
 import ArbolAVL.ArbolAVL;
 import ArbolAVL.VerticeArbolBinario;
 import java.util.Collection;
-
+/**
+ * El objetivo es tener los metodos y atributos necesarios para crear el arbol de nombres
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ArbolNombres extends ArbolAVL<String> {
 
     public class VerticeNombre extends VerticeAVL {

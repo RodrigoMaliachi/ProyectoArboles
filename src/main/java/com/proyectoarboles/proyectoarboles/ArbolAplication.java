@@ -6,7 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * Clase ArbolAplication parte del uso de JavaFx
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ArbolAplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {

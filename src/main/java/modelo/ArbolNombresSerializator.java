@@ -1,7 +1,11 @@
 package modelo;
 
 import java.io.*;
-
+/**
+ * Parte del proceso para generar el arbol de nombres
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ArbolNombresSerializator {
 
     private static final String FILE_PATH = "src/nombres.arb";

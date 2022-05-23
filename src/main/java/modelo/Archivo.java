@@ -5,6 +5,11 @@ import com.opencsv.CSVReader;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * El objetivo es leer el archivo que contiene la informacion de los graduados
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class Archivo {
 
     private static final String ROOT = "Egresados.txt";

@@ -18,7 +18,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.ResourceBundle;
-
+/**
+ * Es el controlador para la interfaz
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ControladorVistaArboles implements Initializable{
     @FXML private CheckBox checkboxNombre;
     @FXML private CheckBox checkboxProf;
@@ -27,25 +31,42 @@ public class ControladorVistaArboles implements Initializable{
     @FXML private TableColumn<Graduado,String> columnaNombre;
     @FXML private TableColumn<Graduado,String> columnaProf;
     @FXML private TableColumn<Graduado,Integer> columnaCal;
+    /**
+     * Contenedor de todos los nombre
+     */
     @FXML ComboBox<String> comboNombre;
+    /**
+     * Contenedor de todas las profesiones
+     */
     @FXML ComboBox<String> comboProf;
+    /**
+     * Contenedor de todas las calificaciones
+     */
     @FXML ComboBox<String> comboCal;
     @FXML Button botonBuscar;
 
-    // Para actualizar datos de la tabla
+    /**
+     * Para actualizar los datos de la tabla
+     */
     private ObservableList<Graduado> egresados;
-
+    /**
+     * Contiene la informacion del archivo CSV
+     */
     private ArrayList<Graduado> egresadosCompleto= new ArrayList<>();
 
     private final ArbolNombres nombres = createTree();
     private final ArbolProfesiones profesiones = new ArbolProfesiones();
     private final ArbolCalificacion calificaciones = new ArbolCalificacion();
-
+    /**
+     * Listas para el proceso de los filtros
+     */
     private ArrayList<Integer> lista1=new ArrayList<>();
     private ArrayList<Integer> lista2=new ArrayList<>();
     private int indiceNombre = -1;
 
-
+    /**
+     * Ordenar por nombres
+     */
     @FXML
     public void filtrarPorNombre(){
         if(checkboxNombre.isSelected()){
@@ -58,6 +79,9 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Ordenar por profesion
+     */
     @FXML
     public void filtrarPorProfesion(){
         if ( checkboxProf.isSelected() ) {
@@ -70,6 +94,9 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Ordenar por calificacion
+     */
     @FXML
     public void filtrarPorCalificacion(){
         if ( checkboxCal.isSelected() ) {
@@ -81,13 +108,15 @@ public class ControladorVistaArboles implements Initializable{
             egresados.addAll(egresadosCompleto);
         }
     }
-
     @FXML
     public void seleccionNombre() {
         String nombre = comboNombre.getValue();
         indiceNombre = !nombre.equals("Nombre") ? nombres.busca(nombre).getIndice() : -1;
     }
 
+    /**
+     * Guardar los indices de los graduados de la profesion seleccionada en alguna de las listas
+     */
     @FXML
     public void seleccionProfesion(){
         try {
@@ -103,6 +132,9 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Guardar los indices de los graduados de la calificacion seleccionada en alguna de las listas
+     */
     @FXML
     public void seleccionCalificacion(){
         try {
@@ -117,6 +149,11 @@ public class ControladorVistaArboles implements Initializable{
         } catch (NumberFormatException ignored){}
     }
 
+    /**
+     * La funcion principal para filtrar los datos.
+     * Se verifica si es por calificacion y profesion.
+     * Se verifica si es por nombre.
+     */
     public void buscar() {
         if ( indiceNombre != -1 ) {
             lista1.clear();
@@ -138,6 +175,10 @@ public class ControladorVistaArboles implements Initializable{
         comboCal.getSelectionModel().selectFirst();
     }
 
+    /**
+     * Muestra el resultado del filtro en la interfaz
+     * @param busqueda es la lista con los resultados obtenidos en la funcion buscar
+     */
     private void mostrarBusqueda(ArrayList<Integer> busqueda){
         egresados.clear();
         for (Integer integer : busqueda) {
@@ -145,6 +186,9 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Crea los arboles de nombre y prefesiones
+     */
     private void initializeTrees(){
         egresadosCompleto=Archivo.leerArchivoCSV();
         if(!fileExists("profesiones.arb") || !fileExists("profesiones.dat")){
@@ -163,6 +207,9 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Se inicializa la tabla e imprime los 624 valores
+     */
     private void initializeTable(){
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnaProf.setCellValueFactory(new PropertyValueFactory<>("profesion"));
@@ -173,6 +220,9 @@ public class ControladorVistaArboles implements Initializable{
         imprimirDatosTable(egresadosCompleto);
     }
 
+    /**
+     * Se agregan los nombres al comboBox de nombres
+     */
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
         listaN.add("Nombre");
@@ -185,6 +235,10 @@ public class ControladorVistaArboles implements Initializable{
         comboNombre.getItems().addAll(listaN);
     }
 
+    /**
+     * Se agregan las profesiones al comboBox.
+     * Si hay 30 profesiones, estas 30 se agregan para que se puedan utilizar para filtrar
+     */
     private void initializeComboboxProfesiones() throws SerializadorException {
         ArrayList<String> listaN = new ArrayList<>();
         listaN.add("Profesion");
@@ -194,6 +248,9 @@ public class ControladorVistaArboles implements Initializable{
         comboProf.getItems().addAll(listaN);
     }
 
+    /**
+     * Se agregan las calificaciones al comboBox
+     */
     private void initializeComboboxCalificaciones() throws SerializadorException {
         ArrayList<String> listaN = new ArrayList<>();
         listaN.add("Calificacion");
@@ -203,6 +260,10 @@ public class ControladorVistaArboles implements Initializable{
         comboCal.getItems().addAll(listaN);
     }
 
+    /**
+     * Esta funcion es la primera que se ejecuta al ejecutar el main.
+     * No es necesario llamarla
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeTrees();
@@ -220,6 +281,10 @@ public class ControladorVistaArboles implements Initializable{
         }
     }
 
+    /**
+     * Para imprimir los datos en la tabla, se llama en initializeTable()
+     * @param alumnos se le pasa egresadosCompletos que es llenado en initializeTrees()
+     */
     private void imprimirDatosTable(ArrayList<Graduado> alumnos){
         egresados.clear();
         egresados.addAll(alumnos);
@@ -229,6 +294,11 @@ public class ControladorVistaArboles implements Initializable{
       return fileExists("nombres.arb") ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
     }
 
+    /**
+     * Verifica la existencias de los archivos .arb y .dat
+     * @param nombre nombre del archivo con extensión
+     * @return false o true segun la exitencia del archivo
+     */
     private static boolean fileExists(String nombre){
         return new File("src/", nombre).exists();
     }

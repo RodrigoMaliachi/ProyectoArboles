@@ -8,10 +8,19 @@ import arbolb.arbol_mas.SerializadorException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * El objetivo es tener los metodos y atributos necesarios para crear el arbol de calificaciones
+ *
+ * @author Rodrigo Natali Jonatan Angelica
+ */
 public class ArbolCalificacion {
     private DepositoArchivos<Integer, ArrayList<Integer>> cal;
 
+    /**
+     * Constructor de la clase.
+     * Se crea un objecto de tipo "DepositoArchivo". Al constructor se le pasa el nombre de los archivos .dat y .arb
+     * Tambien se le pasa la separacion, representando el limite de datos almacenables en los archivos
+     */
     public ArbolCalificacion(){
         try {
             cal =new DepositoArchivos("src/","calificacion",1000);
@@ -23,7 +32,7 @@ public class ArbolCalificacion {
     public void crearArbol(ArrayList<Graduado> listaa) throws SerializadorException, ArbolException {
         for (Graduado graduado : listaa) {
             int cadena = graduado.getPromedio();
-            if(cal.exists(cadena)){
+            if(cal.exists(cadena)){   // Ya se guardó una calificación igual a la que se acaba de ingresar
                 int aux2 = graduado.getIndice(); // El inidice que se agregará
                 ArrayList<Integer> aux3 = new ArrayList<>();  // La lista actualizada
                 aux3 = cal.get(graduado.getPromedio());
@@ -38,19 +47,13 @@ public class ArbolCalificacion {
         }
     }
 
+    /**
+     * Busca un elementos en el arbol dependiendo la clave
+     * @param calificacion es la clave, por ejemplo "90"
+     * @return retorna la lista de indices guardados en la clave
+     */
     public ArrayList<Integer> buscar(int calificacion) throws SerializadorException {
         return cal.get(calificacion);
     }
 
-    public List<Elemento> getIndices() throws SerializadorException{
-        return cal.indices();
-    }
-
-    public void listar() throws SerializadorException {
-        List<ArrayList<Integer>> lista = cal.listar();
-        System.out.println("\nLista");
-        lista.stream().forEach((pru) -> {
-            System.out.println(pru);
-        });
-    }
 }
