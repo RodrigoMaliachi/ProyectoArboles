@@ -13,9 +13,6 @@ import modelo.*;
 import modelo.ArbolCalificacion;
 import modelo.ArbolProfesiones;
 import modelo.Archivo;
-import modelo.Test;
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
-
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -40,11 +37,13 @@ public class ControladorVistaArboles implements Initializable{
 
     private ArrayList<Graduado> egresadosCompleto= new ArrayList<>();
 
-    private final ArbolCalificacion calificaciones = new ArbolCalificacion();
+    private final ArbolNombres nombres = createTree();
     private final ArbolProfesiones profesiones = new ArbolProfesiones();
+    private final ArbolCalificacion calificaciones = new ArbolCalificacion();
 
     private ArrayList<Integer> lista1=new ArrayList<>();
     private ArrayList<Integer> lista2=new ArrayList<>();
+    private int indiceNombre = -1;
 
 
     @FXML
@@ -52,13 +51,8 @@ public class ControladorVistaArboles implements Initializable{
         if(checkboxNombre.isSelected()){
             checkboxProf.setSelected(false);
             checkboxCal.setSelected(false);
-            egresados.sort(new Comparator<Graduado>() {
-                @Override
-                public int compare(Graduado o1, Graduado o2) {
-                    return o1.getNombre().compareTo(o2.getNombre());
-                }
-            });
-        }else{
+            egresados.sort(Comparator.comparing(Graduado::getNombre));
+        } else {
             egresados.clear();
             egresados.addAll(egresadosCompleto);
         }
@@ -66,16 +60,11 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void filtrarPorProfesion(){
-        if(checkboxProf.isSelected()){
+        if ( checkboxProf.isSelected() ) {
             checkboxNombre.setSelected(false);
             checkboxCal.setSelected(false);
-            egresados.sort(new Comparator<Graduado>() {
-                @Override
-                public int compare(Graduado o1, Graduado o2) {
-                    return o1.getProfesion().compareTo(o2.getProfesion());
-                }
-            });
-        }else{
+            egresados.sort(Comparator.comparing(Graduado::getProfesion));
+        } else {
             egresados.clear();
             egresados.addAll(egresadosCompleto);
         }
@@ -83,16 +72,11 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void filtrarPorCalificacion(){
-        if(checkboxCal.isSelected()){
+        if ( checkboxCal.isSelected() ) {
             checkboxNombre.setSelected(false);
             checkboxProf.setSelected(false);
-            egresados.sort(new Comparator<Graduado>() {
-                @Override
-                public int compare(Graduado o1, Graduado o2) {
-                    return o1.getPromedio()-o2.getPromedio();
-                }
-            });
-        }else{
+            egresados.sort(Comparator.comparingInt(Graduado::getPromedio));
+        } else {
             egresados.clear();
             egresados.addAll(egresadosCompleto);
         }
@@ -100,8 +84,8 @@ public class ControladorVistaArboles implements Initializable{
 
     @FXML
     public void seleccionNombre() {
-        comboNombre.getValue();
-        //nombres
+        String nombre = comboNombre.getValue();
+        indiceNombre = !nombre.equals("Nombre") ? nombres.busca(nombre).getIndice() : -1;
     }
 
     @FXML
@@ -115,57 +99,62 @@ public class ControladorVistaArboles implements Initializable{
                 }
             }
         } catch (SerializadorException e) {
-            System.out.println("ERROR: "+e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         }
     }
 
     @FXML
     public void seleccionCalificacion(){
         try {
-            int opc=Integer.parseInt(comboCal.getValue());
+            int opc = Integer.parseInt(comboCal.getValue());
                 if (lista1.isEmpty()) {
                     lista1 = calificaciones.buscar(opc);
                 } else {
                     lista2 = calificaciones.buscar(opc);
                 }
-        } catch (NumberFormatException | SerializadorException e) {
-            System.out.println("ERROR: "+e.getMessage());
-        }
+        } catch (SerializadorException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException ignored){}
     }
 
     public void buscar() {
-        if (!lista1.isEmpty()) {
+        if ( indiceNombre != -1 ) {
+            lista1.clear();
+            lista1.add(indiceNombre);
+            mostrarBusqueda(lista1);
+        } else if (!lista1.isEmpty()) {
             if (lista2.isEmpty()) {
                 mostrarBusqueda(lista1);
-                lista1.clear();
             } else {
                 lista1.retainAll(lista2);
                 mostrarBusqueda(lista1);
-                lista1.clear();
-                lista2.clear();
             }
         }
+        indiceNombre = -1;
+        lista1.clear();
+        lista2.clear();
+        comboNombre.setValue("Nombre");
         comboProf.getSelectionModel().selectFirst();
         comboCal.getSelectionModel().selectFirst();
     }
 
     private void mostrarBusqueda(ArrayList<Integer> busqueda){
         egresados.clear();
-        for(int j = 0; j<busqueda.size();j++){
-            egresados.add(egresadosCompleto.get(busqueda.get(j)-1));
+        for (Integer integer : busqueda) {
+            egresados.add(egresadosCompleto.get(integer - 1));
         }
     }
 
     private void initializeTrees(){
         egresadosCompleto=Archivo.leerArchivoCSV();
-        if(!Test.fileExists("profesiones")){
+        if(!fileExists("profesiones.arb") || !fileExists("profesiones.dat")){
             try {
                 profesiones.crearArbol(egresadosCompleto);
             } catch (SerializadorException | ArbolException e) {
                 e.printStackTrace();
             }
         }
-        if(!Test.fileExists("calificacion")){
+        if(!fileExists("calificacion.arb") || !fileExists("calificacion.dat")){
             try {
                 calificaciones.crearArbol(egresadosCompleto);
             } catch (SerializadorException | ArbolException e) {
@@ -186,6 +175,7 @@ public class ControladorVistaArboles implements Initializable{
 
     private void initializeComboboxNombres(){
         ArrayList<String> listaN = new ArrayList<>();
+        listaN.add("Nombre");
         for(Graduado graduado:egresadosCompleto){
             if(!listaN.contains(graduado.getProfesion())) {
                 listaN.add(graduado.getNombre());
@@ -236,10 +226,10 @@ public class ControladorVistaArboles implements Initializable{
     }
 
     private static ArbolNombres createTree() {
-      return doesFilesTreesExists() ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
+      return fileExists("nombres.arb") ? ArbolNombresSerializator.fromBinaryFile() : new ArbolNombres( Archivo.leerArchivoCSV() );
     }
 
-    private static boolean doesFilesTreesExists(){
-        return new File("src/", "nombres.arb").exists();
+    private static boolean fileExists(String nombre){
+        return new File("src/", nombre).exists();
     }
 }

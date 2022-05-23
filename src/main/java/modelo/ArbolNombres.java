@@ -7,9 +7,9 @@ import java.util.Collection;
 
 public class ArbolNombres extends ArbolAVL<String> {
 
-    protected class VerticeNombre extends VerticeAVL {
+    public class VerticeNombre extends VerticeAVL {
 
-        public int indice;
+        protected int indice;
 
         /**
          * Constructor único que recibe un elemento.
@@ -18,6 +18,10 @@ public class ArbolNombres extends ArbolAVL<String> {
          */
         public VerticeNombre(String elemento) {
             super(elemento);
+        }
+
+        public int getIndice() {
+            return indice;
         }
     }
 
